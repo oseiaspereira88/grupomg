@@ -1,33 +1,19 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomePage from '../views/HomePage.vue'
-import AmbientesPage from '../views/AmbientesPage.vue'
-import PreMoldadosPage from '../views/PreMoldadosPage.vue'
-import SegurancaPage from '../views/SegurancaPage.vue'
+import MgPage from '../views/MgPage.vue'
+import MgaPage from '../views/MgaPage.vue'
+import MgpPage from '../views/MgpPage.vue'
+import MgsPage from '../views/MgsPage.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomePage
-  },
-  {
-    path: '/ambientes-planejados',
-    name: 'ambientes-planejados',
-    component: AmbientesPage
-  },
-  {
-    path: '/pre-moldados',
-    name: 'pre-moldados',
-    component: PreMoldadosPage
-  },
-  {
-    path: '/mgs-seguranca',
-    name: 'mgs-seguranca',
-    component: SegurancaPage
-  },
+  { path: '/', name: 'Grupo MG', component: MgPage },
+  { path: '/mga', name: 'MGA Ambientes Planejados', component: MgaPage },
+  { path: '/mgp', name: 'MGP Pre-moldados e Construções', component: MgpPage },
+  { path: '/mgs', name: 'MGS Seguranca', component: MgsPage },
+  { path: '/agility', name: 'Agility',
+    beforeEnter() { location.href = 'https://agilitytelecom.com.br/' } },
 ]
 
 const router = new VueRouter({
