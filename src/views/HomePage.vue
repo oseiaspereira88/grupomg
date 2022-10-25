@@ -30,7 +30,7 @@ import Footer from '@/components/home/Footer.vue'
 import { VueBotUI } from 'vue-bot-ui'
 
 export default {
-  name: 'MgPage',
+  name: 'HomePage',
   components: {
     Carousel,
     Business,

@@ -1,7 +1,8 @@
 <template>
   <v-app-bar
       style="z-index: 2; background: #EBEBEB;"
-      scroll-target="#scrolling-techniques-7"
+      hide-on-scroll
+      scroll-target="#scrolling-techniques-4"
       absolute>
     <div>
       <a onclick="window.location = '/'">

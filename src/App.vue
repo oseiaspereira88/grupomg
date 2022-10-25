@@ -1,7 +1,10 @@
 <template>
   <v-app>
     <v-main>
-      <v-sheet id="scrolling-techniques-7" max-height="100vh">
+      <v-sheet
+          id="scrolling-techniques-4"
+          class="overflow-y-auto"
+          max-height="100vh">
         <router-view/>
       </v-sheet>
     </v-main>
