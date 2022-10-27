@@ -1,5 +1,5 @@
 <template>
-  <v-container class="section">
+  <v-container id="contatos" class="section">
     <v-row class="pt-10 pb-0" justify="center" align="center" no-gutters>
       <v-col cols="7" sm="5" md="3" class="text-center">
         <h2 class="text-center">INFORMAÇÕES</h2>

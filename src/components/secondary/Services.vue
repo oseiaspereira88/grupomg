@@ -1,6 +1,6 @@
 <template>
   <v-container
-      id="service-section"
+      id="servicos"
       class="section pt-1"
       fluid>
     <v-row class="py-10" justify="center" align="center" no-gutters>

@@ -1,5 +1,5 @@
 <template>
-  <v-container class="section" style="background: #F1F1F1">
+  <v-container id="quem-somos" class="section" style="background: #F1F1F1">
     <v-row>
       <v-col cols="12" md="7">
         <div class="text-center pt-6">
