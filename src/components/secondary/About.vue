@@ -1,21 +1,23 @@
 <template>
   <v-container class="section" style="background: #F1F1F1">
     <v-row>
-      <v-col cols="12" md="6">
-        <div class="text-center">
-          <span style="font-size: 1.5rem; font-weight: 500; color: #0a948f">Quem Somos</span>
+      <v-col cols="12" md="7">
+        <div class="text-center pt-6">
+          <strong style="font-size: 1.5rem; color: #0a948f">Quem Somos</strong>
         </div>
-        <p>
-          é um tipo de piso que pode ser instalado em qualquer ambiente, seja ele residencial ou comercial.
-          É um piso que possui uma grande variedade de cores e texturas, além de ser muito fácil de limpar e
-          manter. Além disso, é um piso que pode ser instalado em qualquer ambiente, seja ele residencial ou
-          comercial. É um piso que possui uma grande variedade de cores e texturas, além de ser muito fácil de
-          limpar e manter.Somos uma empresa de consultoria e assessoria em gestão de pessoas, com foco em
-          desenvolvimento de pessoas e gestão de carreiras.
+        <p class="text-left pl-16 pr-16 pt-4 text-justify">
+          Nossa empresa foi fundada em 1989, com o objetivo de oferecer soluções de
+          segurança para empresas e residências. Com o passar dos anos, a empresa
+          cresceu e se tornou referência no mercado de segurança eletrônica em
+          todo o estado de Rio Grande do Norte. Atualmente, a empresa conta com
+          mais de 30 anos de experiência e mais de 100 mil clientes atendidos. A
+          MGA Segurança Eletrônica é uma empresa que oferece soluções completas
+          para segurança eletrônica, com equipamentos de alta qualidade e
+          tecnologia de ponta.
         </p>
       </v-col>
-      <v-col cols="12" md="6" style="padding: 0">
-        <v-img contain :src="require('@/assets/img/slides/ambientes.png')"/>
+      <v-col cols="12" md="5" style="padding: 0">
+        <v-img :src="require('@/assets/img/mgp/mgp-2.png')"/>
       </v-col>
     </v-row>
   </v-container>

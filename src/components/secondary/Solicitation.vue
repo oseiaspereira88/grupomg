@@ -1,8 +1,8 @@
 <template>
-  <v-container class="section" style="background: #117263">
+  <v-container class="section" style="background: #30a692">
     <v-row class="py-10" justify="center" align="center" no-gutters>
       <v-col cols="6" class="py-4 text-center text--darken-1">
-        <span style="font-size: 1.5rem; font-weight: 500; color: #FFFFFF"> Solicite seu orçamento já</span>
+        <strong style="font-size: 1.5rem; color: #FFFFFF"> Solicite seu orçamento já</strong>
       </v-col>
       <v-col cols="3" class="text-center">
         <v-btn light class="text-center py-4 px-16">
