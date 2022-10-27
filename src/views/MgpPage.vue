@@ -41,18 +41,18 @@ import Solicitation from "@/components/secondary/Solicitation";
 import Reliability from "@/components/secondary/Reliability";
 import Clients from "@/components/secondary/Clients";
 import Information from "@/components/secondary/Information";
-import Footer from "@/components/secondary/Footer";
-import NavbarMobile from "@/components/secondary/mobile/NavbarMobile";
-import CoverMobile from "@/components/secondary/mobile/CoverMobile";
-import PartnersMobile from "@/components/secondary/mobile/PartnersMobile";
-import ServicesMobile from "@/components/secondary/mobile/ServicesMobile";
-import AboutMobile from "@/components/secondary/mobile/AboutMobile";
-import PortfolioMobile from "@/components/secondary/mobile/PortfolioMobile";
-import SolicitationMobile from "@/components/secondary/mobile/SolicitationMobile";
-import ReliabilityMobile from "@/components/secondary/mobile/ReliabilityMobile";
-import ClientsMobile from "@/components/secondary/mobile/ClientsMobile";
-import InformationMobile from "@/components/secondary/mobile/InformationMobile";
-import FooterMobile from "@/components/secondary/mobile/FooterMobile";
+// import Footer from "@/components/secondary/Footer";
+// import NavbarMobile from "@/components/secondary/mobile/NavbarMobile";
+// import CoverMobile from "@/components/secondary/mobile/CoverMobile";
+// import PartnersMobile from "@/components/secondary/mobile/PartnersMobile";
+// import ServicesMobile from "@/components/secondary/mobile/ServicesMobile";
+// import AboutMobile from "@/components/secondary/mobile/AboutMobile";
+// import PortfolioMobile from "@/components/secondary/mobile/PortfolioMobile";
+// import SolicitationMobile from "@/components/secondary/mobile/SolicitationMobile";
+// import ReliabilityMobile from "@/components/secondary/mobile/ReliabilityMobile";
+// import ClientsMobile from "@/components/secondary/mobile/ClientsMobile";
+// import InformationMobile from "@/components/secondary/mobile/InformationMobile";
+// import FooterMobile from "@/components/secondary/mobile/FooterMobile";
 
 export default {
   name: 'MgpPage',
@@ -67,18 +67,18 @@ export default {
     Reliability,
     Clients,
     Information,
-    Footer,
-    NavbarMobile,
-    CoverMobile,
-    PartnersMobile,
-    ServicesMobile,
-    AboutMobile,
-    PortfolioMobile,
-    SolicitationMobile,
-    ReliabilityMobile,
-    ClientsMobile,
-    InformationMobile,
-    FooterMobile,
+    // Footer,
+    // NavbarMobile,
+    // CoverMobile,
+    // PartnersMobile,
+    // ServicesMobile,
+    // AboutMobile,
+    // PortfolioMobile,
+    // SolicitationMobile,
+    // ReliabilityMobile,
+    // ClientsMobile,
+    // InformationMobile,
+    // FooterMobile,
   },
   data: () => {
     return {
