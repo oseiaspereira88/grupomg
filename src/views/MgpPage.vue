@@ -91,6 +91,9 @@ export default {
       this.isMobile = window.innerWidth <= 998;
     },
   },
+  mounted() {
+    location.href = '#home';
+  },
   created() {
     this.handleView();
     window.addEventListener('resize', this.handleView);
