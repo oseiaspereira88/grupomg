@@ -1,5 +1,6 @@
 <template>
-  <div class="home" v-if="!isMobile">
+<!--  v-if="!isMobile"-->
+  <div class="home">
     <Navbar/>
     <Cover/>
     <Partners/>
@@ -12,19 +13,19 @@
     <Information/>
     <Footer/>
   </div>
-  <div v-else>
-    <NavbarMobile/>
-    <CoverMobile/>
-    <PartnersMobile/>
-    <ServicesMobile/>
-    <AboutMobile/>
-    <PortfolioMobile/>
-    <SolicitationMobile/>
-    <ReliabilityMobile/>
-    <ClientsMobile/>
-    <InformationMobile/>
-    <FooterMobile/>
-  </div>
+<!--  <div v-else>-->
+<!--    <NavbarMobile/>-->
+<!--    <CoverMobile/>-->
+<!--    <PartnersMobile/>-->
+<!--    <ServicesMobile/>-->
+<!--    <AboutMobile/>-->
+<!--    <PortfolioMobile/>-->
+<!--    <SolicitationMobile/>-->
+<!--    <ReliabilityMobile/>-->
+<!--    <ClientsMobile/>-->
+<!--    <InformationMobile/>-->
+<!--    <FooterMobile/>-->
+<!--  </div>-->
 </template>
 
 <script>

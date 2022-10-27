@@ -3,6 +3,7 @@
   <div class="home">
     <Navbar/>
     <Cover/>
+    <VueBotUI/>
     <Partners/>
     <Services/>
     <About/>
