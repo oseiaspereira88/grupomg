@@ -43,10 +43,10 @@ export default {
   data: () => ({
     nav_itens: [
       'Home',
+      'Serviços',
       'Quem Somos',
-      'Empresas',
-      'Parceiros',
       'Contato',
+      'Grupo MG',
     ],
   }),
 }
