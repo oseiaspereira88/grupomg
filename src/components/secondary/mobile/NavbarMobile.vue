@@ -6,7 +6,7 @@
         scroll-target="#scrolling-techniques-7">
       <div>
         <a onclick="window.location = '/'">
-          <v-img :src="require('../../../assets/img/slogan.png')"
+          <v-img :src="require('../../../assets/img/logos/grupo_mg.png')"
                  class="pa-0 py-6"
                  style="width: 180px; left: 0;"
                  contain/>
