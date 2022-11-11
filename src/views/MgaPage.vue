@@ -1,32 +1,52 @@
 <template>
-<!--  v-if="!isMobile"-->
+  <!--  v-if="!isMobile"-->
   <div class="home">
-    <Navbar/>
-    <Cover/>
-    <VueBotUI/>
-    <Partners/>
-    <Services/>
-    <About/>
-    <Portfolio/>
-    <Solicitation/>
-    <Reliability/>
-    <Clients/>
-    <Information/>
-    <Footer/>
+    <Navbar
+        :itens="nav_itens"
+        :nav_image_src="require('@/assets/img/logos/mga_logo.png')"
+        nav_bg_color="#117263"
+    />
+
+    <v-sheet
+        id="scrolling-techniques-4"
+        class="overflow-y-auto"
+        max-height="100vh"
+        style="overflow-x: hidden;">
+      <Cover :image_src="require('@/assets/img/cover/mga_cover.png')"/>
+      <VueBotUI/>
+      <Partners/>
+      <Services :services="services"/>
+      <About
+          text="Nossa empresa é especializada em soluções de tecnologia da informação,
+        com foco em desenvolvimento de sistemas web e mobile, consultoria e treinamentos.
+        Nossa equipe é formada por profissionais com mais de 10 anos de experiência em
+        desenvolvimento de software, com foco em soluções de alta performance e
+        escalabilidade. Nossa missão é entregar soluções de tecnologia da informação
+        que atendam as necessidades de nossos clientes, com foco em qualidade, agilidade
+        e custo-benefício."
+
+          :image_src="require('@/assets/img/mgp/mgp-2.png')"
+      />
+      <Portfolio :works="works"/>
+      <Solicitation whatsapp_number="84994310065"/>
+      <Reliability/>
+      <Clients :clients="clients"/>
+      <Information
+          address="Rua João Pessoa, 1000, Centro, Mossoró/RN"
+          email="contato_mga@gmail.com"
+          phone="84 99943-1006"
+          :video_src="require('@/assets/video/mga-info-video.mp4')"
+      />
+      <Footer
+          :logo_src="require('@/assets/img/logos/mga_logo.png')"
+          bussiness_name="MGA Ambientes Planejados"
+          bussiness_cnpj="CNPJ: 11.111.111/1111-11"
+          facebook_link="https://www.facebook.com/mgatecnologia"
+          instagram_link="https://www.instagram.com/mgatecnologia/"
+          email_link="emailto:contato_mga@gmail.com"
+      />
+    </v-sheet>
   </div>
-<!--  <div v-else>-->
-<!--    <NavbarMobile/>-->
-<!--    <CoverMobile/>-->
-<!--    <PartnersMobile/>-->
-<!--    <ServicesMobile/>-->
-<!--    <AboutMobile/>-->
-<!--    <PortfolioMobile/>-->
-<!--    <SolicitationMobile/>-->
-<!--    <ReliabilityMobile/>-->
-<!--    <ClientsMobile/>-->
-<!--    <InformationMobile/>-->
-<!--    <FooterMobile/>-->
-<!--  </div>-->
 </template>
 
 <script>
@@ -60,8 +80,136 @@ export default {
   },
   data: () => {
     return {
+      nav_itens: [
+        {title: 'Home', link: '#home'},
+        {title: 'Serviços', link: '#servicos'},
+        {title: 'Quem Somos', link: '#quem-somos'},
+        {title: 'Contatos', link: '#contatos'},
+        {title: 'Grupo MG', link: '/'},
+      ],
+      services: [
+        {
+          title: 'Piso Vinílico',
+          subtitle: '49 opções disponíveis',
+          description: 'Temos uma variedade de pisos vinílicos, prontos para serem instalados. Nossos parceiros de longo prazo têm todas as ferramentas necessárias para realizar a instalação em seu local.',
+          src: require('@/assets/img/cards/card_mga.png'),
+          show: false,
+          id: 1
+        },
+        {
+          title: 'Piso Vinílico',
+          subtitle: '49 opções disponíveis',
+          description: 'Temos uma variedade de pisos vinílicos, prontos para serem instalados. Nossos parceiros de longo prazo têm todas as ferramentas necessárias para realizar a instalação em seu local.',
+          src: require('@/assets/img/cards/card_agility.png'),
+          show: false,
+          id: 2
+        },
+        {
+          title: 'Piso Vinílico',
+          subtitle: '49 opções disponíveis',
+          description: 'Temos uma variedade de pisos vinílicos, prontos para serem instalados. Nossos parceiros de longo prazo têm todas as ferramentas necessárias para realizar a instalação em seu local.',
+          src: require('@/assets/img/cards/card_mgp.png'),
+          show: false,
+          id: 3
+        },
+        {
+          title: 'Piso Vinílico',
+          subtitle: '49 opções disponíveis',
+          description: 'Temos uma variedade de pisos vinílicos, prontos para serem instalados. Nossos parceiros de longo prazo têm todas as ferramentas necessárias para realizar a instalação em seu local.',
+          src: require('@/assets/img/cards/card_mgs.png'),
+          show: false,
+          id: 4
+        },
+        {
+          title: 'Piso Vinílico',
+          subtitle: '49 opções disponíveis',
+          description: 'Temos uma variedade de pisos vinílicos, prontos para serem instalados. Nossos parceiros de longo prazo têm todas as ferramentas necessárias para realizar a instalação em seu local.',
+          src: require('@/assets/img/cards/card_mga.png'),
+          show: false,
+          id: 5
+        },
+        {
+          title: 'Piso Vinílico',
+          subtitle: '49 opções disponíveis',
+          description: 'Temos uma variedade de pisos vinílicos, prontos para serem instalados. Nossos parceiros de longo prazo têm todas as ferramentas necessárias para realizar a instalação em seu local.',
+          src: require('@/assets/img/cards/card_agility.png'),
+          show: false,
+          id: 6
+        },
+        {
+          title: 'Piso Vinílico',
+          subtitle: '49 opções disponíveis',
+          description: 'Temos uma variedade de pisos vinílicos, prontos para serem instalados. Nossos parceiros de longo prazo têm todas as ferramentas necessárias para realizar a instalação em seu local.',
+          src: require('@/assets/img/cards/card_mgp.png'),
+          show: false,
+          id: 7
+        },
+        {
+          title: 'Piso Vinílico',
+          subtitle: '49 opções disponíveis',
+          description: 'Temos uma variedade de pisos vinílicos, prontos para serem instalados. Nossos parceiros de longo prazo têm todas as ferramentas necessárias para realizar a instalação em seu local.',
+          src: require('@/assets/img/cards/card_mgs.png'),
+          show: false,
+          id: 8
+        },
+        {
+          title: 'Piso Vinílico',
+          subtitle: '49 opções disponíveis',
+          description: 'Temos uma variedade de pisos vinílicos, prontos para serem instalados. Nossos parceiros de longo prazo têm todas as ferramentas necessárias para realizar a instalação em seu local.',
+          src: require('@/assets/img/cards/card_mga.png'),
+          show: false,
+          id: 9
+        },
+        {
+          title: 'Piso Vinílico',
+          subtitle: '49 opções disponíveis',
+          description: 'Temos uma variedade de pisos vinílicos, prontos para serem instalados. Nossos parceiros de longo prazo têm todas as ferramentas necessárias para realizar a instalação em seu local.',
+          src: require('@/assets/img/cards/card_agility.png'),
+          show: false,
+          id: 10
+        },
+        {
+          title: 'Piso Vinílico',
+          subtitle: '49 opções disponíveis',
+          description: 'Temos uma variedade de pisos vinílicos, prontos para serem instalados. Nossos parceiros de longo prazo têm todas as ferramentas necessárias para realizar a instalação em seu local.',
+          src: require('@/assets/img/cards/card_mgp.png'),
+          show: false,
+          id: 11
+        },
+        {
+          title: 'Piso Vinílico',
+          subtitle: '49 opções disponíveis',
+          description: 'Temos uma variedade de pisos vinílicos, prontos para serem instalados. Nossos parceiros de longo prazo têm todas as ferramentas necessárias para realizar a instalação em seu local.',
+          src: require('@/assets/img/cards/card_mgs.png'),
+          show: false,
+          id: 12
+        },
+        {
+          title: 'Piso Vinílico',
+          subtitle: '49 opções disponíveis',
+          description: 'Temos uma variedade de pisos vinílicos, prontos para serem instalados. Nossos parceiros de longo prazo têm todas as ferramentas necessárias para realizar a instalação em seu local.',
+          src: require('@/assets/img/cards/card_mgs.png'),
+          show: false,
+          id: 13
+        },
+      ],
+      works: [
+        {src: require('@/assets/img/cover.jpg'), id: 1},
+        {src: require('@/assets/img/cover.jpg'), id: 2},
+        {src: require('@/assets/img/cover.jpg'), id: 3},
+        {src: require('@/assets/img/cover.jpg'), id: 4},
+        {src: require('@/assets/img/cover.jpg'), id: 5},
+        {src: require('@/assets/img/cover.jpg'), id: 6},
+        {src: require('@/assets/img/cover.jpg'), id: 7},
+      ],
+      clients: [
+        {srcImage: require('@/assets/img/logos/mg_logo.png')},
+        {srcImage: require('@/assets/img/cards/card_mga.png')},
+        {srcImage: require('@/assets/img/cards/card_mgp.png')},
+        {srcImage: require('@/assets/img/cards/card_mgs.png')},
+      ],
       isMobile: true,
-      showNav: false
+      showNav: false,
     }
   },
   methods: {
@@ -70,7 +218,7 @@ export default {
     },
   },
   mounted() {
-    location.href = '#home';
+    window.scrollTo(0, 0)
   },
   created() {
     this.handleView();

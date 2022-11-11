@@ -1,12 +1,18 @@
 <template>
   <v-container id="cover-section" class="section">
-    <v-img id="img_cover" :src="require('../../assets/img/slides/ambientes.png')"/>
+    <v-img id="img_cover" :src="image_src"></v-img>
   </v-container>
 </template>
 
 <script>
 export default {
-  name: "Cover"
+  name: "Cover",
+  props: {
+    image_src: {
+      type: String,
+      required: true,
+    },
+  },
 }
 </script>
 

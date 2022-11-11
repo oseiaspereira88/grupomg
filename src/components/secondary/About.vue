@@ -6,18 +6,11 @@
           <strong style="font-size: 1.5rem; color: #0a948f">Quem Somos</strong>
         </div>
         <p class="text-left pl-16 pr-16 pt-4 text-justify">
-          Nossa empresa foi fundada em 1989, com o objetivo de oferecer soluções de
-          segurança para empresas e residências. Com o passar dos anos, a empresa
-          cresceu e se tornou referência no mercado de segurança eletrônica em
-          todo o estado de Rio Grande do Norte. Atualmente, a empresa conta com
-          mais de 30 anos de experiência e mais de 100 mil clientes atendidos. A
-          MGA Segurança Eletrônica é uma empresa que oferece soluções completas
-          para segurança eletrônica, com equipamentos de alta qualidade e
-          tecnologia de ponta.
+          {{text}}
         </p>
       </v-col>
       <v-col cols="12" md="5" style="padding: 0">
-        <v-img :src="require('@/assets/img/mgp/mgp-2.png')"/>
+        <v-img height="300" :src="image_src"/>
       </v-col>
     </v-row>
   </v-container>
@@ -25,7 +18,17 @@
 
 <script>
 export default {
-  name: "About"
+  name: "About",
+  props: {
+    text: {
+      type: String,
+      required: true
+    },
+    image_src: {
+      type: String,
+      required: true
+    }
+  },
 }
 </script>
 

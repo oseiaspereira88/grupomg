@@ -1,6 +1,6 @@
 <template>
   <v-container class="section pb-12" style="background: #ffffff">
-    <v-row class="pt-10 pb-0" justify="center" align="center" no-gutters>
+    <v-row class="pt-16 pb-0" justify="center" align="center" no-gutters>
       <v-col cols="7" sm="5" md="3" class="text-center">
         <h2 class="text-center">CONFIABILIDADE</h2>
         <div class="pt-1 mx-16" style="background: #0a948f"></div>

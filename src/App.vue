@@ -1,13 +1,6 @@
 <template>
-  <v-app>
-    <v-main>
-      <v-sheet
-          id="scrolling-techniques-4"
-          class="overflow-y-auto"
-          max-height="100vh">
-        <router-view/>
-      </v-sheet>
-    </v-main>
+  <v-app style="overflow-y: hidden !important;">
+    <router-view style="overflow-y: hidden !important;"/>
   </v-app>
 </template>
 
@@ -46,7 +39,7 @@ export default {
   overflow: hidden;
 }
 
-.bg-right-container #animation1{
+.bg-right-container #animation1 {
   height: 70%;
 }
 

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import MgPage from '../views/HomePage.vue'
+import MgPage from '../views/MgPage.vue'
 import MgaPage from '../views/MgaPage.vue'
 import MgpPage from '../views/MgpPage.vue'
 import MgsPage from '../views/MgsPage.vue'

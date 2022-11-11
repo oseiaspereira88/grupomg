@@ -4,7 +4,7 @@
       <v-row>
         <v-col cols="3">
           <v-item>
-            <v-img :src="require('@/assets/img/logos/mga.png')"
+            <v-img :src="require('@/assets/img/logos/mga_logo.png')"
                    height="100"
                    width="120"
                    contain/>
@@ -12,7 +12,7 @@
         </v-col>
         <v-col cols="3">
           <v-item>
-            <v-img :src="require('@/assets/img/logos/mg.png')"
+            <v-img :src="require('@/assets/img/logos/mgp_logo.png')"
                    height="100"
                    width="120"
                    contain/>
@@ -20,7 +20,7 @@
         </v-col>
         <v-col cols="3">
           <v-item>
-            <v-img :src="require('@/assets/img/logos/agility.png')"
+            <v-img :src="require('@/assets/img/logos/agility_logo.png')"
                    height="100"
                    width="120"
                    contain/>
@@ -28,7 +28,7 @@
         </v-col>
         <v-col cols="3">
           <v-item>
-            <v-img :src="require('@/assets/img/logos/mgs.png')"
+            <v-img :src="require('@/assets/img/logos/mgs_logo.png')"
                    height="100"
                    width="120"
                    contain/>
@@ -36,7 +36,6 @@
         </v-col>
       </v-row>
     </v-item-group>
-    <h3 class="text-center pt-4 pb-6" style="font-size: 16pt">Líderes em construção e infraestrutura</h3>
   </v-container>
 </template>
 
@@ -45,7 +44,3 @@ export default {
   name: "Partners",
 }
 </script>
-
-<style scoped>
-
-</style>

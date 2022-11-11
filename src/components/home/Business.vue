@@ -1,7 +1,7 @@
 <template>
   <v-container id="business-section" class="section px-16 pt-4" style="background: #F1F1F1" fluid>
     <h1 class="text-center mt-6" style="font-size: 24pt">CONHEÇA NOSSAS EMPRESAS</h1>
-    <h2 class="text-center" style="font-size: 12pt">Clique nos logos abaixo para conhecer mais sobre cada uma delas</h2>
+    <h2 class="text-center" style="font-size: 12pt">Clique abaixo para conhecer mais sobre cada uma delas</h2>
 
     <v-container class="pa-16 pt-10">
       <v-item-group>
@@ -30,10 +30,10 @@ export default {
   name: 'Business',
   data: () => ({
     cards: [
-      {src: require('@/assets/img/cards/card_agility.png'), action: '/agility'},
       {src: require('@/assets/img/cards/card_mga.png'), action: '/mga'},
       {src: require('@/assets/img/cards/card_mgp.png'), action: '/mgp'},
       {src: require('@/assets/img/cards/card_mgs.png'), action: '/mgs'},
+      {src: require('@/assets/img/cards/card_agility.png'), action: '/agility'},
     ],
   }),
   created() {

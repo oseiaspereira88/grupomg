@@ -9,7 +9,7 @@
       <v-slide-group v-model="model" show-arrows>
         <v-slide-item v-for="n in 15" :key="n">
           <v-card :color="'#F1F1F1'" class="mx-4" height="120" width="120" elevation="0">
-            <v-img :src="clients[0].srcImage"></v-img>
+            <v-img :src="clients[0].image_src"></v-img>
           </v-card>
         </v-slide-item>
       </v-slide-group>
@@ -22,14 +22,11 @@
 
 export default {
   name: 'Clients',
-  data: () => ({
-    model: null,
-    clients: [
-      {srcImage: require('@/assets/img/logos/grupo_mg.png')},
-      {srcImage: require('@/assets/img/cards/card_mga.png')},
-      {srcImage: require('@/assets/img/cards/card_mgp.png')},
-      {srcImage: require('@/assets/img/cards/card_mgs.png')},
-    ],
-  }),
+  props:{
+    clients: {
+      type: Array,
+      default: () => []
+    }
+  },
 }
 </script>

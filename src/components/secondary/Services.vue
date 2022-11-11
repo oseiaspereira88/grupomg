@@ -21,8 +21,12 @@
               elevation="0"
           >
             <v-img height="100" :src="service.src"></v-img>
-            <v-card-title>Piso vinílico</v-card-title>
-            <v-card-subtitle>49 opções disponíveis</v-card-subtitle>
+            <v-card-title>
+              {{service.title}}
+            </v-card-title>
+            <v-card-subtitle>
+              {{service.subtitle}}
+            </v-card-subtitle>
 
             <v-card-actions>
               <v-btn disabled color="orange lighten-2" style="color: orange !important;" text>
@@ -37,9 +41,8 @@
             <v-expand-transition>
               <div :id="'description'+service.id" v-show="service.show">
                 <v-divider></v-divider>
-
                 <v-card-text>
-                  Temos uma variedade de pisos vinílicos, prontos para serem instalados. Nossos parceiros de longo prazo têm todas as ferramentas necessárias para realizar a instalação em seu local.
+                  {{ service.description }}
                 </v-card-text>
               </div>
             </v-expand-transition>
@@ -55,23 +58,12 @@
 
 export default {
   name: "Services",
-  data: () => ({
-    services: [
-      {src: require('@/assets/img/cards/card_mga.png'), show: false, id: 1},
-      {src: require('@/assets/img/cards/card_agility.png'), show: false, id: 2},
-      {src: require('@/assets/img/cards/card_mgp.png'), show: false, id: 3},
-      {src: require('@/assets/img/cards/card_mgs.png'), show: false, id: 4},
-      {src: require('@/assets/img/cards/card_mga.png'), show: false, id: 5},
-      {src: require('@/assets/img/cards/card_agility.png'), show: false, id: 6},
-      {src: require('@/assets/img/cards/card_mgp.png'), show: false, id: 7},
-      {src: require('@/assets/img/cards/card_mgs.png'), show: false, id: 8},
-      {src: require('@/assets/img/cards/card_mga.png'), show: false, id: 9},
-      {src: require('@/assets/img/cards/card_agility.png'), show: false, id: 10},
-      {src: require('@/assets/img/cards/card_mgp.png'), show: false, id: 11},
-      {src: require('@/assets/img/cards/card_mgs.png'), show: false, id: 12},
-      {src: require('@/assets/img/cards/card_mgs.png'), show: false, id: 13},
-    ],
-  }),
+  props: {
+    services: {
+      type: Array,
+      required: true
+    }
+  },
   methods: {
     serviceToggle(s) {
       if (s.show) {

@@ -1,17 +1,11 @@
 <template>
-  <div class="home" >
+  <div class="home" style="overflow-y: hidden !important;">
     <Carousel/>
     <VueBotUI/>
     <Business/>
-    <Clients/>
+    <Clients :clients="clients"/>
     <Footer/>
   </div>
-<!--  <div v-else>-->
-<!--    <Carousel/>-->
-<!--    <Business/>-->
-<!--    <ClientsMobile/>-->
-<!--    <FooterMobile/>-->
-<!--  </div>-->
 </template>
 
 <style lang="scss">
@@ -30,7 +24,7 @@ import Footer from '@/components/home/Footer.vue'
 import { VueBotUI } from 'vue-bot-ui'
 
 export default {
-  name: 'HomePage',
+  name: 'MgPage',
   components: {
     Carousel,
     Business,
@@ -41,13 +35,22 @@ export default {
   data: () => {
     return {
       isMobile: true,
-      showNav: false
+      showNav: false,
+      clients: [
+        {image_src: require('@/assets/img/logos/mg_logo.png')},
+        {image_src: require('@/assets/img/cards/card_mga.png')},
+        {image_src: require('@/assets/img/cards/card_mgp.png')},
+        {image_src: require('@/assets/img/cards/card_mgs.png')},
+      ],
     }
   },
   methods: {
     handleView() {
       this.isMobile = window.innerWidth <= 998;
     },
+  },
+  mounted() {
+    window.scrollTo()
   },
   created() {
     this.handleView();

@@ -4,13 +4,13 @@
         class="pb-4"
         height="80vh"
         hide-delimiter-background
-        show-arrows-on-hover cycle>
+        show-arrows-on-hover>
 
-      <v-carousel-item v-for="(item, i) in items" :key="i" :src="item">
-        <v-parallax :src="item" height="600" :class="'parallax_item_' + i"></v-parallax>
+      <v-carousel-item v-for="(image, i) in images" :key="i">
+        <v-parallax :src="require('@/assets/img/cover/mg_cover.png')" height="600" :class="'parallax_item_' + i"></v-parallax>
       </v-carousel-item>
     </v-carousel>
-    <div class="pt-1" style="background: #0a948f"></div>
+    <div style="background: #0a948f;"></div>
   </v-container>
 </template>
 
@@ -20,7 +20,7 @@
 }
 .v-parallax__image {
   width: 100vw !important;
-  visibility: hidden;
+  /*visibility: hidden;*/
 }
 </style>
 
@@ -28,22 +28,14 @@
 
 export default {
   name: 'Carousel',
-  components: {},
   data() {
     return {
-      items: [
-        require('@/assets/img/slides/grupomg.png'),
-        require('@/assets/img/slides/pre_moldados.png'),
-        require('@/assets/img/slides/ambientes.png'),
-        require('@/assets/img/slides/agility.png'),
-        require('@/assets/img/slides/segurança.png'),
-      ],
-      slide_titles: [
-        'Grupo MG',
-        'MG Pre-Moldados e Construções',
-        'MG Ambientes Planejados',
-        'Agility',
-        'MGS Segurança',
+      images: [
+        { src: require('@/assets/img/cover/mg_cover.png') },
+        { src: require('@/assets/img/cover/mgp_cover.png') },
+        { src: require('@/assets/img/cover/mga_cover.png') },
+        { src: require('@/assets/img/cover/mgs_cover.png') },
+        { src: require('@/assets/img/cover/agility_cover.png') },
       ],
     }
   },
@@ -70,11 +62,11 @@ export default {
     },
   },
   mounted:function(){
-    this.correctParallax()
+    //this.correctParallax()
 
-    for(let image of document.getElementsByClassName('v-parallax__image')){
-      image.style.visibility = 'visible';
-    }
+    // for(let image of document.getElementsByClassName('v-parallax__image')){
+    //   image.style.visibility = 'visible';
+    // }
   },
 }
 </script>

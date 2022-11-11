@@ -6,7 +6,7 @@
       </v-col>
       <v-col cols="3" class="text-center">
         <v-btn light class="text-center py-4 px-16">
-          <strong>Solicitação</strong>
+          <strong>Solicitar</strong>
         </v-btn>
       </v-col>
     </v-row>
@@ -15,7 +15,13 @@
 
 <script>
 export default {
-  name: "Solicitation"
+  name: "Solicitation",
+  props: {
+    whatsapp_number: {
+      type: String,
+      required: true
+    }
+  },
 }
 </script>
 

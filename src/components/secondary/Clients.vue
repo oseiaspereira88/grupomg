@@ -21,14 +21,11 @@
 
 export default {
   name: 'Clients',
-  data: () => ({
-    model: null,
-    clients: [
-      {srcImage: require('@/assets/img/logos/grupo_mg.png')},
-      {srcImage: require('@/assets/img/cards/card_mga.png')},
-      {srcImage: require('@/assets/img/cards/card_mgp.png')},
-      {srcImage: require('@/assets/img/cards/card_mgs.png')},
-    ],
-  }),
+  props: {
+    clients: {
+      type: Array,
+      required: true
+    }
+  },
 }
 </script>

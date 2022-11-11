@@ -4,7 +4,7 @@
       <v-col class="text-center text--darken-1" cols="6">
         <div class="d-flex flex-row" style="height: 100%;">
           <div class="ml-16">
-            <v-img height="180" width="180" :src="require('@/assets/img/logos/mg_white.png')"></v-img>
+            <v-img height="180" width="180" :src="require('@/assets/img/logos/mg_white_logo.png')"></v-img>
           </div>
           <v-container fill-height fluid style="width: 33vw; height: 100%;">
             <v-row class="text-left white--text pt-4">
