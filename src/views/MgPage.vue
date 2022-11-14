@@ -52,16 +52,17 @@ export default {
     }
   },
   methods: {
-    handleView() {
+    checkMobile() {
       this.isMobile = window.innerWidth <= 998;
+      return this.isMobile;
     },
   },
   mounted() {
     window.scrollTo()
   },
   created() {
-    this.handleView();
-    window.addEventListener('resize', this.handleView);
+    this.checkMobile();
+    window.addEventListener('resize', this.checkMobile);
   },
 }
 </script>
