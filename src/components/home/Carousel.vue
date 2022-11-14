@@ -1,5 +1,5 @@
 <template>
-  <v-container id="home-section" class="section">
+  <v-container id="carousel-section" class="section">
     <v-carousel
         class="pb-4"
         height="80vh"
@@ -62,15 +62,14 @@ export default {
         carouselHeight = 480;
       }
 
-
       let styles = `
-        .v-parallax__image{
+        #carousel-section .v-parallax__image{
           padding-bottom: ${ getPaddingByWidth() } !important;
         }
       `;
 
       let mobileStyles = `
-        .v-carousel{
+        #carousel-section .v-carousel{
           height: ${carouselHeight}px !important;
         }
       `;
