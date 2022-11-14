@@ -1,6 +1,6 @@
 <template>
   <div class="home" style="overflow-y: hidden !important;">
-    <Carousel/>
+    <Carousel :images="carousel_images"/>
     <VueBotUI/>
     <Business/>
     <Clients :clients="clients"/>
@@ -41,6 +41,13 @@ export default {
         {image_src: require('@/assets/img/cards/card_mga.png')},
         {image_src: require('@/assets/img/cards/card_mgp.png')},
         {image_src: require('@/assets/img/cards/card_mgs.png')},
+      ],
+      carousel_images: [
+        require('@/assets/img/cover/mg_cover.png'),
+        require('@/assets/img/cover/mgp_cover.png'),
+        require('@/assets/img/cover/mga_cover.png'),
+        require('@/assets/img/cover/mgs_cover.png'),
+        require('@/assets/img/cover/agility_cover.png'),
       ],
     }
   },

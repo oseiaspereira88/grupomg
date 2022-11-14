@@ -4,7 +4,7 @@
       hide-on-scroll
       scroll-target="#scrolling-techniques-4"
       absolute>
-    <div>
+    <div id="home">
       <a onclick="window.location = '/'">
         <v-img :src="nav_image_src"
                style="width: 120px;left: 0;"
@@ -14,7 +14,7 @@
     </div>
     <v-row justify="center" no-gutters>
       <div v-for="(item, i) in itens" :key="i" :style="{fontSize: 10 + 'pt'}">
-        <v-btn @click="navegateTo(item.link)" v-if="link === 'Home'" text class="mx-1 my-2 v-btn--active"
+        <v-btn @click="navegateTo(item.link)" v-if="item.link === '#home'" text class="mx-1 my-2 v-btn--active"
                color="#117263">
           {{ item.title }}
         </v-btn>
@@ -53,13 +53,15 @@ export default {
       type: String,
       required: true
     },
+    scrollToTop: Function
   },
   methods: {
     navegateTo(link) {
-      if (link === '/') {
-        window.location = '/'
+      if(link === "#home"){
+        this.$parent.scrollToTop()
+      } else{
+        document.getElementById(link).scrollIntoView({behavior: "smooth"});
       }
-      location.href = link
     }
   },
 }

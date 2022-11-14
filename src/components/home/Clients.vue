@@ -6,7 +6,7 @@
       fluid>
     <h2 class="text-center">CLIENTES</h2>
     <div class="px-16" style="background: #F1F1F1">
-      <v-slide-group v-model="model" show-arrows>
+      <v-slide-group show-arrows>
         <v-slide-item v-for="n in 15" :key="n">
           <v-card :color="'#F1F1F1'" class="mx-4" height="120" width="120" elevation="0">
             <v-img :src="clients[0].image_src"></v-img>

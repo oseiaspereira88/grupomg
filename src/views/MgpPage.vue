@@ -1,20 +1,19 @@
 <template>
-<!--  v-if="!isMobile"-->
-  <div class="home">
+  <!--  v-if="!isMobile"-->
+  <div class="home" style="overflow-y: hidden !important;">
     <Navbar
         :itens="nav_itens"
-        :nav_image_src="require('@/assets/img/logos/mga_logo.png')"
+        :nav_image_src="require('@/assets/img/logos/mgp_logo.png')"
+        :scroll-to-top="scrollToTop"
         nav_bg_color="#117263"
     />
-
+    <VueBotUI/>
     <v-sheet
         id="scrolling-techniques-4"
         class="overflow-y-auto"
         max-height="100vh"
         style="overflow-x: hidden;">
-
       <Cover :image_src="require('@/assets/img/cover/mgp_cover.png')"/>
-      <VueBotUI/>
       <Partners/>
       <Services :services="services"/>
       <About
@@ -41,13 +40,12 @@
       />
       <Footer
           :logo_src="require('@/assets/img/logos/mgp_logo.png')"
-          bussiness_name="MGA Ambientes Planejados"
+          bussiness_name="MGP Ambientes Planejados"
           bussiness_cnpj="CNPJ: 22.222.222/2222-22"
           facebook_link="https://www.facebook.com/mgatecnologia"
           instagram_link="https://www.instagram.com/mgatecnologia/"
           email_link="emailto:contato_mgp@gmail.com"
       />
-
     </v-sheet>
   </div>
 </template>
@@ -65,6 +63,7 @@ import Reliability from "@/components/secondary/Reliability";
 import Clients from "@/components/secondary/Clients";
 import Information from "@/components/secondary/Information";
 import Footer from "@/components/secondary/Footer";
+import {VueBotUI} from 'vue-bot-ui'
 
 export default {
   name: 'MgpPage',
@@ -79,15 +78,16 @@ export default {
     Reliability,
     Clients,
     Information,
-    Footer
+    Footer,
+    VueBotUI
   },
   data: () => {
     return {
       nav_itens: [
-        {title: 'Home', link: '#home'},
-        {title: 'Serviços', link: '#servicos'},
-        {title: 'Quem Somos', link: '#quem-somos'},
-        {title: 'Contatos', link: '#contatos'},
+        {title: 'Início', link: 'home'},
+        {title: 'Serviços', link: 'servicos'},
+        {title: 'Quem Somos', link: 'quem-somos'},
+        {title: 'Contatos', link: 'contatos'},
         {title: 'Grupo MG', link: '/'},
       ],
       services: [
@@ -218,6 +218,13 @@ export default {
   methods: {
     handleView() {
       this.isMobile = window.innerWidth <= 998;
+    },
+    scrollToTop() {
+      alert('scrollToTop');
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     },
   },
   mounted() {

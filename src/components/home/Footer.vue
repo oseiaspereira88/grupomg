@@ -7,11 +7,14 @@
             <v-img height="180" width="180" :src="require('@/assets/img/logos/mg_white_logo.png')"></v-img>
           </div>
           <v-container fill-height fluid style="width: 33vw; height: 100%;">
-            <v-row class="text-left white--text pt-4">
+            <div class="text-left white--text pt-4">
               <strong>Todos os direitos reservados.</strong>
-              <p class="ma-0 pa-0">C&C Casa e Construção Ltda.</p>
-              <p>CNPJ: 63.004.030.0030-20</p>
-            </v-row>
+              <p class="ma-0 pa-0">
+                <strong>CNPJ:</strong>
+                00.000.000/0000-00
+              </p>
+              <p>Grupo MG Ltda.</p>
+            </div>
           </v-container>
         </div>
       </v-col>

@@ -13,6 +13,10 @@ export default {
 
 <style lang="scss">
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .scroll-none::-webkit-scrollbar {
   display: none;
 }

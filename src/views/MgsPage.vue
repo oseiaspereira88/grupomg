@@ -6,7 +6,7 @@
         :nav_image_src="require('@/assets/img/logos/mgs_logo.png')"
         nav_bg_color="#117263"
     />
-
+    <VueBotUI/>
     <v-sheet
         id="scrolling-techniques-4"
         class="overflow-y-auto"
@@ -14,7 +14,6 @@
         style="overflow-x: hidden;">
 
       <Cover :image_src="require('@/assets/img/cover/mgs_cover.png')"/>
-      <VueBotUI/>
       <Partners/>
       <About class="mt-4"
              text="Nossa empresa é especializada em soluções de tecnologia da informação,
@@ -62,6 +61,7 @@ import Reliability from "@/components/secondary/Reliability";
 import Clients from "@/components/secondary/Clients";
 import Information from "@/components/secondary/Information";
 import Footer from "@/components/secondary/Footer";
+import { VueBotUI } from 'vue-bot-ui'
 
 export default {
   name: 'MgsPage',
@@ -76,11 +76,12 @@ export default {
     Clients,
     Information,
     Footer,
+    VueBotUI,
   },
   data: () => {
     return {
       nav_itens: [
-        {title: 'Home', link: '#home'},
+        {title: 'Início', link: '#home'},
         {title: 'Quem Somos', link: '#quem-somos'},
         {title: 'Contatos', link: '#contatos'},
         {title: 'Grupo MG', link: '/'},

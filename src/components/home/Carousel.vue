@@ -7,7 +7,7 @@
         show-arrows-on-hover>
 
       <v-carousel-item v-for="(image, i) in images" :key="i">
-        <v-parallax :src="require('@/assets/img/cover/mg_cover.png')" height="600" :class="'parallax_item_' + i"></v-parallax>
+        <v-parallax :src="image" height="600" :class="'parallax_item_' + i"></v-parallax>
       </v-carousel-item>
     </v-carousel>
     <div style="background: #0a948f;"></div>
@@ -20,7 +20,6 @@
 }
 .v-parallax__image {
   width: 100vw !important;
-  /*visibility: hidden;*/
 }
 </style>
 
@@ -28,16 +27,11 @@
 
 export default {
   name: 'Carousel',
-  data() {
-    return {
-      images: [
-        { src: require('@/assets/img/cover/mg_cover.png') },
-        { src: require('@/assets/img/cover/mgp_cover.png') },
-        { src: require('@/assets/img/cover/mga_cover.png') },
-        { src: require('@/assets/img/cover/mgs_cover.png') },
-        { src: require('@/assets/img/cover/agility_cover.png') },
-      ],
-    }
+  props: {
+    images: {
+      type: Array,
+      required: true
+    },
   },
   created() {
     window.addEventListener("resize", this.correctParallax);
@@ -47,26 +41,23 @@ export default {
   },
   methods: {
     correctParallax() {
-      let parallax_images = document.getElementsByClassName('v-parallax__image');
-
       function getPaddingByWidth() {
         return (window.innerWidth - 1380)/(-1.68) + 'px';
       }
 
-      let padding = getPaddingByWidth();
-      for (let i = 0; i < parallax_images.length; i++) {
-        parallax_images[i].style.paddingBottom = padding;
-      }
+      let styles = `
+        .v-parallax__image{
+            padding-bottom: ${ getPaddingByWidth() } !important;
+        }
+      `
 
-      console.log(padding);
+      let styleSheet = document.createElement("style")
+      styleSheet.innerText = styles
+      document.head.appendChild(styleSheet)
     },
   },
-  mounted:function(){
-    //this.correctParallax()
-
-    // for(let image of document.getElementsByClassName('v-parallax__image')){
-    //   image.style.visibility = 'visible';
-    // }
+  mounted: function(){
+    this.correctParallax()
   },
 }
 </script>

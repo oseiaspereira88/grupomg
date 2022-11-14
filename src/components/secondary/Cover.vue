@@ -1,5 +1,6 @@
 <template>
   <v-container id="cover-section" class="section">
+    <div id="home"></div>
     <v-img id="img_cover" :src="image_src"></v-img>
   </v-container>
 </template>
@@ -20,10 +21,9 @@ export default {
 #cover-section {
   background: #FFFFFF;
   height: 90vh;
+  overflow: hidden;
 }
 #img_cover {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 </style>
