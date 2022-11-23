@@ -40,7 +40,7 @@
       <Footer
           :logo_src="require('@/assets/img/logos/mga_logo.png')"
           bussiness_name="MGA Ambientes Planejados"
-          bussiness_cnpj="CNPJ: 11.111.111/1111-11"
+          bussiness_cnpj="11.111.111/1111-11"
           facebook_link="https://www.facebook.com/mgatecnologia"
           instagram_link="https://www.instagram.com/mgatecnologia/"
           email_link="emailto:contato_mga@gmail.com"
