@@ -13,7 +13,7 @@
                 width="120"/>
           </div>
           <v-container fill-height fluid>
-            <div class="text-left white--text">
+            <div class="text-left white--text pt-6">
               Todos os direitos reservados.
               <p class="ma-0 pa-0">
                 <strong>CNPJ:</strong>
@@ -26,7 +26,7 @@
       </v-col>
       <v-col
           cols="12" sm="4"
-          class="px-sm-4 px-0 pt-0 pt-sm-14 text--darken-1 text-center text-sm-left"
+          class="px-sm-4 px-0 pt-4 pt-sm-14 text--darken-1 text-center text-sm-left"
       >
         <strong class="white--text align-center">SIGA-NOS</strong>
         <div class="d-flex flex-row text" style="height: 100%;">
@@ -43,7 +43,7 @@
           </v-row>
         </div>
       </v-col>
-      <v-col cols="12" class="text-center text--darken-1 pt-12">
+      <v-col cols="12" class="text-center text--darken-1 pt-10">
         <strong class="white--text">
           <span class="mr-1">Designed by ©</span>
           EmpreendApp <span>and</span> Alpha Digital
