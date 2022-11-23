@@ -1,14 +1,19 @@
 <template>
-  <v-container id="carousel-section" class="section" style="background: #F1F1F1">
+  <v-container
+      id="carousel-section"
+      class="section" style="background: #F1F1F1"
+  >
     <v-carousel
         class="pb-4"
-        style="border-style: solid"
         hide-delimiter-background
         show-arrows-on-hover
         cycle>
 
-      <v-carousel-item v-for="(image, i) in images" :key="i">
-        <v-parallax :src="image" height="600" :class="'parallax_item_' + i"></v-parallax>
+      <v-carousel-item
+          v-for="(image, i) in images"
+          :key="i"
+      >
+        <v-parallax :src="image" height="600" :class="'parallax_item_' + i"/>
       </v-carousel-item>
 
     </v-carousel>
@@ -17,9 +22,6 @@
 </template>
 
 <style>
-#home-section {
-  height: auto;
-}
 .v-parallax__image {
   width: 100vw !important;
 }
@@ -45,9 +47,9 @@ export default {
     correctParallax() {
       function getPaddingByWidth() {
         if(window.innerWidth <= 600) {
-          return (window.innerWidth - 1380)/(-1.65) + 'px';
+          return (window.innerWidth - 1380)/(-1.56) + 'px';
         } else {
-          return (window.innerWidth - 1380)/(-1.65) + 'px';
+          return (window.innerWidth - 1380)/(-1.56) + 'px';
         }
       }
 
@@ -55,13 +57,13 @@ export default {
 
       let carouselHeight = 0;
       if(window.innerWidth <= 600) {
-        carouselHeight = 39.2;
+        carouselHeight = 254;
       } else if(window.innerWidth <= 700) {
-        carouselHeight = 55;
+        carouselHeight = 360;
       } else if(window.innerWidth <= 800) {
-        carouselHeight = 70;
+        carouselHeight = 400;
       } else if(window.innerWidth <= 960) {
-        carouselHeight = 80;
+        carouselHeight = 420;
       }
 
       let styles = `
@@ -72,7 +74,7 @@ export default {
 
       let mobileStyles = `
         #carousel-section .v-carousel{
-          height: ${carouselHeight}vh !important;
+          height: ${carouselHeight}px !important;
         }
       `;
 
