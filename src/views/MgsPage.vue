@@ -1,5 +1,4 @@
 <template>
-  <!--  v-if="!isMobile"-->
   <div class="home">
     <Navbar
         :itens="nav_itens"
@@ -39,7 +38,7 @@
       <Footer
           :logo_src="require('@/assets/img/logos/mgs_logo.png')"
           bussiness_name="MGA Ambientes Planejados"
-          bussiness_cnpj="CNPJ: 33.333.333/3333-33"
+          bussiness_cnpj="33.333.333/3333-33"
           facebook_link="#"
           instagram_link="https://www.instagram.com/mgs/"
           email_link="emailto:contato_mgs@gmail.com"

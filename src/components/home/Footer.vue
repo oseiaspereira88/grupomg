@@ -1,12 +1,12 @@
 <template>
   <v-footer class="pt-4 pb-4" style="background: #0a948f" padless>
     <v-row justify="center" no-gutters>
-      <v-col class="text-center text--darken-1" cols="6">
+      <v-col cols="8" class="text-center text--darken-1">
         <div class="d-flex flex-row" style="height: 100%;">
-          <div class="ml-16">
-            <v-img height="180" width="180" :src="require('@/assets/img/logos/mg_white_logo.png')"></v-img>
+          <div class="ml-16 pl-12">
+            <v-img height="150" width="130" :src="require('@/assets/img/logos/mg_white_logo.png')"></v-img>
           </div>
-          <v-container fill-height fluid style="width: 33vw; height: 100%;">
+          <v-container fill-height fluid style="width: 33vw">
             <div class="text-left white--text pt-4">
               <strong>Todos os direitos reservados.</strong>
               <p class="ma-0 pa-0">
@@ -18,7 +18,7 @@
           </v-container>
         </div>
       </v-col>
-      <v-col class="pt-12 text--darken-1" style="padding-left: 20vw" cols="6">
+      <v-col cols="4" class="px-4 pt-12 text--darken-1">
         <strong class="white--text">Siga-nos</strong>
         <div class="d-flex flex-row" style="height: 100%;">
           <v-row class="white--text pl-2 pr-16 pt-4">
@@ -34,8 +34,11 @@
           </v-row>
         </div>
       </v-col>
-      <v-col class="text-center text--darken-1" cols="12">
-        <strong class="white--text"><span class="mr-1">Designed by ©</span>EmpreendApp and Alpha Digital</strong>
+      <v-col cols="12" class="text-center text--darken-1">
+        <strong class="white--text">
+          <span class="mr-1">Designed by ©</span>
+          EmpreendApp <span>and</span> Alpha Digital
+        </strong>
       </v-col>
     </v-row>
   </v-footer>

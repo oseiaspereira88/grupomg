@@ -13,7 +13,8 @@
                 {{ bussiness_name }}
               </p>
               <p>
-                CNPJ: {{ bussiness_cnpj }}
+                <strong>CNPJ:</strong>
+                {{ bussiness_cnpj }}
               </p>
             </v-row>
           </v-container>

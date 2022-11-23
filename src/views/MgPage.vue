@@ -4,7 +4,8 @@
     <VueBotUI/>
     <Business/>
     <Clients :clients="clients"/>
-    <Footer/>
+    <Footer v-if="!isMobile"/>
+    <FooterMobile v-if="isMobile"/>
   </div>
 </template>
 
@@ -21,6 +22,7 @@ import Carousel from '@/components/home/Carousel.vue'
 import Business from '@/components/home/Business.vue'
 import Clients from '@/components/home/Clients.vue'
 import Footer from '@/components/home/Footer.vue'
+import FooterMobile from '@/components/home/mobile/FooterMobile'
 import { VueBotUI } from 'vue-bot-ui'
 
 export default {
@@ -30,6 +32,7 @@ export default {
     Business,
     Clients,
     Footer,
+    FooterMobile,
     VueBotUI,
   },
   data: () => {

@@ -41,7 +41,7 @@
       <Footer
           :logo_src="require('@/assets/img/logos/mgp_logo.png')"
           bussiness_name="MGP Ambientes Planejados"
-          bussiness_cnpj="CNPJ: 22.222.222/2222-22"
+          bussiness_cnpj="22.222.222/2222-22"
           facebook_link="https://www.facebook.com/mgatecnologia"
           instagram_link="https://www.instagram.com/mgatecnologia/"
           email_link="emailto:contato_mgp@gmail.com"
