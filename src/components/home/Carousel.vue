@@ -1,5 +1,5 @@
 <template>
-  <v-container id="carousel-section" class="section">
+  <v-container id="carousel-section" class="section" style="background: #F1F1F1">
     <v-carousel
         class="pb-4"
         height="80vh"
@@ -45,9 +45,9 @@ export default {
     correctParallax() {
       function getPaddingByWidth() {
         if(window.innerWidth <= 600) {
-          return (window.innerWidth - 1380)/(-1.65) + 'px';
+          return (window.innerWidth - 1380)/(-1.55) + 'px';
         } else {
-          return (window.innerWidth - 1380)/(-1.68) + 'px';
+          return (window.innerWidth - 1380)/(-1.55) + 'px';
         }
       }
 
