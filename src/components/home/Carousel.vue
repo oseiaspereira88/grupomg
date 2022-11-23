@@ -2,7 +2,7 @@
   <v-container id="carousel-section" class="section" style="background: #F1F1F1">
     <v-carousel
         class="pb-4"
-        height="80vh"
+        style="border-style: solid"
         hide-delimiter-background
         show-arrows-on-hover
         cycle>
@@ -45,9 +45,9 @@ export default {
     correctParallax() {
       function getPaddingByWidth() {
         if(window.innerWidth <= 600) {
-          return (window.innerWidth - 1380)/(-1.55) + 'px';
+          return (window.innerWidth - 1380)/(-1.65) + 'px';
         } else {
-          return (window.innerWidth - 1380)/(-1.55) + 'px';
+          return (window.innerWidth - 1380)/(-1.65) + 'px';
         }
       }
 
@@ -55,11 +55,13 @@ export default {
 
       let carouselHeight = 0;
       if(window.innerWidth <= 600) {
-        carouselHeight = 280;
+        carouselHeight = 39.2;
+      } else if(window.innerWidth <= 700) {
+        carouselHeight = 55;
       } else if(window.innerWidth <= 800) {
-        carouselHeight = 380;
+        carouselHeight = 70;
       } else if(window.innerWidth <= 960) {
-        carouselHeight = 480;
+        carouselHeight = 80;
       }
 
       let styles = `
@@ -70,7 +72,7 @@ export default {
 
       let mobileStyles = `
         #carousel-section .v-carousel{
-          height: ${carouselHeight}px !important;
+          height: ${carouselHeight}vh !important;
         }
       `;
 
