@@ -2,7 +2,7 @@
   <!--  v-if="!isMobile"-->
   <div class="home" style="overflow-y: hidden !important;">
     <Navbar
-        :itens="nav_itens"
+        :items="nav_itens"
         :nav_image_src="require('@/assets/img/logos/mgp_logo.png')"
         :scroll-to-top="scrollToTop"
         nav_bg_color="#117263"
@@ -30,7 +30,6 @@
 
       <Portfolio :works="works"/>
       <Solicitation whatsapp_number="84994310065"/>
-      <Reliability/>
       <Clients :clients="clients"/>
       <Information
           address="Rua João Pessoa, 1000, Centro, Mossoró/RN"
@@ -59,7 +58,6 @@ import Services from "@/components/secondary/Services";
 import About from "@/components/secondary/About";
 import Portfolio from "@/components/secondary/Portfolio";
 import Solicitation from "@/components/secondary/Solicitation";
-import Reliability from "@/components/secondary/Reliability";
 import Clients from "@/components/secondary/Clients";
 import Information from "@/components/secondary/Information";
 import Footer from "@/components/secondary/Footer";
@@ -75,7 +73,6 @@ export default {
     About,
     Portfolio,
     Solicitation,
-    Reliability,
     Clients,
     Information,
     Footer,
@@ -84,11 +81,30 @@ export default {
   data: () => {
     return {
       nav_itens: [
-        {title: 'Início', link: 'home'},
-        {title: 'Serviços', link: 'servicos'},
-        {title: 'Quem Somos', link: 'quem-somos'},
-        {title: 'Contatos', link: 'contatos'},
-        {title: 'Grupo MG', link: '/'},
+        {
+          title: 'Início',
+          link: '#home',
+          icon: 'mdi-home'
+        },
+        {
+          title: 'Serviços',
+          link: '#servicos',
+          icon: 'mdi-cogs'
+        },
+        {title: 'Quem Somos',
+          link: '#quem-somos',
+          icon: 'mdi-account-group'
+        },
+        {
+          title: 'Contatos',
+          link: '#contatos',
+          icon: 'mdi-whatsapp'
+        },
+        {
+          title: 'Grupo MG',
+          link: '/',
+          icon: 'mdi-open-in-new'
+        }
       ],
       services: [
         {

@@ -1,8 +1,7 @@
 <template>
-  <!--  v-if="!isMobile"-->
   <div class="home">
     <Navbar
-        :itens="nav_itens"
+        :items="nav_itens"
         :nav_image_src="require('@/assets/img/logos/mga_logo.png')"
         nav_bg_color="#117263"
     />
@@ -11,11 +10,14 @@
         id="scrolling-techniques-4"
         class="overflow-y-auto"
         max-height="100vh"
-        style="overflow-x: hidden;">
+        style="overflow-x: hidden;"
+    >
       <Cover :image_src="require('@/assets/img/cover/mga_cover.png')"/>
-      <VueBotUI/>
       <Partners/>
-      <Services :services="services"/>
+
+      <Services :services="services"
+      />
+
       <About
           text="Nossa empresa é especializada em soluções de tecnologia da informação,
         com foco em desenvolvimento de sistemas web e mobile, consultoria e treinamentos.
@@ -27,16 +29,22 @@
 
           :image_src="require('@/assets/img/mgp/mgp-2.png')"
       />
+
       <Portfolio :works="works"/>
+
       <Solicitation whatsapp_number="84994310065"/>
+
       <Reliability/>
+
       <Clients :clients="clients"/>
+
       <Information
           address="Rua João Pessoa, 1000, Centro, Mossoró/RN"
           email="contato_mga@gmail.com"
           phone="84 99943-1006"
           :video_src="require('@/assets/video/mga-info-video.mp4')"
       />
+
       <Footer
           :logo_src="require('@/assets/img/logos/mga_logo.png')"
           bussiness_name="MGA Ambientes Planejados"
@@ -83,11 +91,30 @@ export default {
   data: () => {
     return {
       nav_itens: [
-        {title: 'Início', link: '#home'},
-        {title: 'Serviços', link: '#servicos'},
-        {title: 'Quem Somos', link: '#quem-somos'},
-        {title: 'Contatos', link: '#contatos'},
-        {title: 'Grupo MG', link: '/'},
+        {
+          title: 'Início',
+          link: '#home',
+          icon: 'mdi-home'
+        },
+        {
+          title: 'Serviços',
+          link: '#servicos',
+          icon: 'mdi-cogs'
+        },
+        {title: 'Quem Somos',
+          link: '#quem-somos',
+          icon: 'mdi-account-group'
+        },
+        {
+          title: 'Contatos',
+          link: '#contatos',
+          icon: 'mdi-whatsapp'
+        },
+        {
+          title: 'Grupo MG',
+          link: '/',
+          icon: 'mdi-open-in-new'
+        }
       ],
       services: [
         {

@@ -1,7 +1,16 @@
 <template>
-  <v-container id="business-section" class="section px-16 pt-4" style="background: #F1F1F1" fluid>
-    <h1 class="text-center mt-6" style="font-size: 24pt">CONHEÇA NOSSAS EMPRESAS</h1>
-    <h2 class="text-center" style="font-size: 12pt">Clique abaixo para conhecer mais sobre cada uma delas</h2>
+  <v-container
+      id="business-section"
+      class="section px-16 pt-4"
+      style="background: #F1F1F1"
+      fluid
+  >
+    <h1 class="text-center mt-6" style="font-size: 24pt">
+      CONHEÇA NOSSAS EMPRESAS
+    </h1>
+    <h2 class="text-center" style="font-size: 12pt">
+      Clique abaixo para conhecer mais sobre cada uma delas
+    </h2>
 
     <v-container id="business-container" class="pa-16 pt-10">
       <v-item-group>

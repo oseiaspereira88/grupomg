@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Navbar
-        :itens="nav_itens"
+        :items="nav_itens"
         :nav_image_src="require('@/assets/img/logos/mgs_logo.png')"
         nav_bg_color="#117263"
     />
@@ -80,10 +80,30 @@ export default {
   data: () => {
     return {
       nav_itens: [
-        {title: 'Início', link: '#home'},
-        {title: 'Quem Somos', link: '#quem-somos'},
-        {title: 'Contatos', link: '#contatos'},
-        {title: 'Grupo MG', link: '/'},
+        {
+          title: 'Início',
+          link: '#home',
+          icon: 'mdi-home'
+        },
+        {
+          title: 'Serviços',
+          link: '#servicos',
+          icon: 'mdi-cogs'
+        },
+        {title: 'Quem Somos',
+          link: '#quem-somos',
+          icon: 'mdi-account-group'
+        },
+        {
+          title: 'Contatos',
+          link: '#contatos',
+          icon: 'mdi-whatsapp'
+        },
+        {
+          title: 'Grupo MG',
+          link: '/',
+          icon: 'mdi-open-in-new'
+        }
       ],
       works: [
         {src: require('@/assets/img/cover.jpg'), id: 1},

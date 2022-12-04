@@ -6,8 +6,7 @@
     <v-carousel
         class="pb-4"
         hide-delimiter-background
-        show-arrows-on-hover
-        cycle>
+        show-arrows-on-hover>
 
       <v-carousel-item
           v-for="(image, i) in images"
