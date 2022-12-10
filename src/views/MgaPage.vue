@@ -13,10 +13,8 @@
         style="overflow-x: hidden;"
     >
       <Cover :image_src="require('@/assets/img/cover/mga_cover.png')"/>
-      <Partners/>
 
-      <Services :services="services"
-      />
+      <Services :services="services"/>
 
       <About
           text="Nossa empresa é especializada em soluções de tecnologia da informação,
@@ -45,13 +43,13 @@
           :video_src="require('@/assets/video/mga-info-video.mp4')"
       />
 
-      <Footer
+      <ResponsiveFooter
           :logo_src="require('@/assets/img/logos/mga_logo.png')"
-          bussiness_name="MGA Ambientes Planejados"
-          bussiness_cnpj="11.111.111/1111-11"
-          facebook_link="https://www.facebook.com/mgatecnologia"
-          instagram_link="https://www.instagram.com/mgatecnologia/"
-          email_link="emailto:contato_mga@gmail.com"
+          business_name="MGA Ambientes Planejados"
+          business_cnpj="00.000.000/0000-00"
+          email_link="mailto:mga.oficial@gmail.com?subject=Contato%20de%20Cliente%20via%20Website"
+          instagram_link="https://instagram.com/_u/mga_ambientes/"
+          whatsapp_link="https://api.whatsapp.com/send?phone=84996212299"
       />
     </v-sheet>
   </div>
@@ -59,25 +57,24 @@
 
 <script>
 
-import Navbar from "@/components/secondary/Navbar";
-import Cover from "@/components/secondary/Cover";
-import Partners from "@/components/secondary/Partners";
-import Services from "@/components/secondary/Services";
-import About from "@/components/secondary/About";
-import Portfolio from "@/components/secondary/Portfolio";
-import Solicitation from "@/components/secondary/Solicitation";
-import Reliability from "@/components/secondary/Reliability";
-import Clients from "@/components/secondary/Clients";
-import Information from "@/components/secondary/Information";
-import Footer from "@/components/secondary/Footer";
+import Navbar from "@/components/secondary/principal/Navbar.vue";
+import Cover from "@/components/secondary/principal/Cover.vue";
+import Services from "@/components/secondary/principal/Services.vue";
+import About from "@/components/secondary/principal/About.vue";
+import Portfolio from "@/components/secondary/principal/Portfolio.vue";
+import Solicitation from "@/components/secondary/principal/Solicitation.vue";
+import Reliability from "@/components/secondary/principal/Reliability.vue";
+import Clients from "@/components/secondary/principal/Clients.vue";
+import Information from "@/components/secondary/principal/Information.vue";
+import ResponsiveFooter from "@/components/general/ResponsiveFooter.vue";
 import { VueBotUI } from 'vue-bot-ui'
 
 export default {
   name: 'MgaPage',
   components: {
+    ResponsiveFooter,
     Navbar,
     Cover,
-    Partners,
     Services,
     About,
     Portfolio,
@@ -85,7 +82,6 @@ export default {
     Reliability,
     Clients,
     Information,
-    Footer,
     VueBotUI
   },
   data: () => {
@@ -161,65 +157,9 @@ export default {
           title: 'Piso Vinílico',
           subtitle: '49 opções disponíveis',
           description: 'Temos uma variedade de pisos vinílicos, prontos para serem instalados. Nossos parceiros de longo prazo têm todas as ferramentas necessárias para realizar a instalação em seu local.',
-          src: require('@/assets/img/cards/card_agility.png'),
-          show: false,
-          id: 6
-        },
-        {
-          title: 'Piso Vinílico',
-          subtitle: '49 opções disponíveis',
-          description: 'Temos uma variedade de pisos vinílicos, prontos para serem instalados. Nossos parceiros de longo prazo têm todas as ferramentas necessárias para realizar a instalação em seu local.',
           src: require('@/assets/img/cards/card_mgp.png'),
           show: false,
           id: 7
-        },
-        {
-          title: 'Piso Vinílico',
-          subtitle: '49 opções disponíveis',
-          description: 'Temos uma variedade de pisos vinílicos, prontos para serem instalados. Nossos parceiros de longo prazo têm todas as ferramentas necessárias para realizar a instalação em seu local.',
-          src: require('@/assets/img/cards/card_mgs.png'),
-          show: false,
-          id: 8
-        },
-        {
-          title: 'Piso Vinílico',
-          subtitle: '49 opções disponíveis',
-          description: 'Temos uma variedade de pisos vinílicos, prontos para serem instalados. Nossos parceiros de longo prazo têm todas as ferramentas necessárias para realizar a instalação em seu local.',
-          src: require('@/assets/img/cards/card_mga.png'),
-          show: false,
-          id: 9
-        },
-        {
-          title: 'Piso Vinílico',
-          subtitle: '49 opções disponíveis',
-          description: 'Temos uma variedade de pisos vinílicos, prontos para serem instalados. Nossos parceiros de longo prazo têm todas as ferramentas necessárias para realizar a instalação em seu local.',
-          src: require('@/assets/img/cards/card_agility.png'),
-          show: false,
-          id: 10
-        },
-        {
-          title: 'Piso Vinílico',
-          subtitle: '49 opções disponíveis',
-          description: 'Temos uma variedade de pisos vinílicos, prontos para serem instalados. Nossos parceiros de longo prazo têm todas as ferramentas necessárias para realizar a instalação em seu local.',
-          src: require('@/assets/img/cards/card_mgp.png'),
-          show: false,
-          id: 11
-        },
-        {
-          title: 'Piso Vinílico',
-          subtitle: '49 opções disponíveis',
-          description: 'Temos uma variedade de pisos vinílicos, prontos para serem instalados. Nossos parceiros de longo prazo têm todas as ferramentas necessárias para realizar a instalação em seu local.',
-          src: require('@/assets/img/cards/card_mgs.png'),
-          show: false,
-          id: 12
-        },
-        {
-          title: 'Piso Vinílico',
-          subtitle: '49 opções disponíveis',
-          description: 'Temos uma variedade de pisos vinílicos, prontos para serem instalados. Nossos parceiros de longo prazo têm todas as ferramentas necessárias para realizar a instalação em seu local.',
-          src: require('@/assets/img/cards/card_mgs.png'),
-          show: false,
-          id: 13
         },
       ],
       works: [

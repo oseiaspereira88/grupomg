@@ -4,8 +4,14 @@
     <VueBotUI/>
     <Business/>
     <Clients :clients="clients"/>
-    <Footer v-if="!isMobile"/>
-    <FooterMobile v-if="isMobile"/>
+    <ResponsiveFooter
+        business_name="Grupo MG Ltda."
+        business_cnpj="00.000.000/0001-00"
+        :logo_src="require('@/assets/img/logos/mg_white_logo.png')"
+        email_link="mailto:grupomg@gmail.com?subject=Contato%20de%20Cliente%20via%20Website"
+        instagram_link="https://instagram.com/_u/grupomg/"
+        whatsapp_link="https://api.whatsapp.com/send?phone=84996212299"
+    />
   </div>
 </template>
 
@@ -21,9 +27,8 @@
 import Carousel from '@/components/home/Carousel.vue'
 import Business from '@/components/home/Business.vue'
 import Clients from '@/components/home/Clients.vue'
-import Footer from '@/components/home/Footer.vue'
-import FooterMobile from '@/components/home/mobile/FooterMobile'
-import { VueBotUI } from 'vue-bot-ui'
+import ResponsiveFooter from "@/components/general/ResponsiveFooter.vue";
+import {VueBotUI} from 'vue-bot-ui'
 
 export default {
   name: 'MgPage',
@@ -31,13 +36,11 @@ export default {
     Carousel,
     Business,
     Clients,
-    Footer,
-    FooterMobile,
+    ResponsiveFooter,
     VueBotUI,
   },
   data: () => {
     return {
-      isMobile: true,
       showNav: false,
       clients: [
         {image_src: require('@/assets/img/logos/mg_logo.png')},
@@ -53,19 +56,6 @@ export default {
         require('@/assets/img/cover/agility_cover.png'),
       ],
     }
-  },
-  methods: {
-    checkMobile() {
-      this.isMobile = window.innerWidth <= 998;
-      return this.isMobile;
-    },
-  },
-  mounted() {
-    window.scrollTo()
-  },
-  created() {
-    this.checkMobile();
-    window.addEventListener('resize', this.checkMobile);
   },
 }
 </script>

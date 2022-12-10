@@ -35,13 +35,13 @@
           phone="84 99943-1006"
           :video_src="require('@/assets/video/mga-info-video.mp4')"
       />
-      <Footer
+      <ResponsiveFooter
           :logo_src="require('@/assets/img/logos/mgs_logo.png')"
-          bussiness_name="MGA Ambientes Planejados"
+          bussiness_name="MGS Segurança Eletrônica"
           bussiness_cnpj="33.333.333/3333-33"
-          facebook_link="#"
-          instagram_link="https://www.instagram.com/mgs/"
-          email_link="emailto:contato_mgs@gmail.com"
+          email_link="mailto:mgs.oficial@gmail.com?subject=Contato%20de%20Cliente%20via%20Website"
+          instagram_link="https://instagram.com/_u/mgs_seguranca/"
+          whatsapp_link="https://api.whatsapp.com/send?phone=84996212299"
       />
 
     </v-sheet>
@@ -50,21 +50,22 @@
 
 <script>
 
-import Navbar from "@/components/secondary/Navbar";
-import Cover from "@/components/secondary/Cover";
-import Partners from "@/components/secondary/Partners";
-import About from "@/components/secondary/About";
-import Portfolio from "@/components/secondary/Portfolio";
-import Solicitation from "@/components/secondary/Solicitation";
-import Reliability from "@/components/secondary/Reliability";
-import Clients from "@/components/secondary/Clients";
-import Information from "@/components/secondary/Information";
-import Footer from "@/components/secondary/Footer";
+import Navbar from "@/components/secondary/principal/Navbar.vue";
+import Cover from "@/components/secondary/principal/Cover.vue";
+import Partners from "@/components/secondary/principal/Partners.vue";
+import About from "@/components/secondary/principal/About.vue";
+import Portfolio from "@/components/secondary/principal/Portfolio.vue";
+import Solicitation from "@/components/secondary/principal/Solicitation.vue";
+import Reliability from "@/components/secondary/principal/Reliability.vue";
+import Clients from "@/components/secondary/principal/Clients.vue";
+import Information from "@/components/secondary/principal/Information.vue";
+import ResponsiveFooter from "@/components/general/ResponsiveFooter.vue";
 import { VueBotUI } from 'vue-bot-ui'
 
 export default {
   name: 'MgsPage',
   components: {
+    ResponsiveFooter,
     Navbar,
     Cover,
     Partners,
@@ -74,7 +75,6 @@ export default {
     Reliability,
     Clients,
     Information,
-    Footer,
     VueBotUI,
   },
   data: () => {

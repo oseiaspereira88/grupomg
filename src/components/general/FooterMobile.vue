@@ -8,7 +8,7 @@
         <div class="d-flex flex-row" style="height: 100%;">
           <div class="mx-6 ml-sm-12 pt-6">
             <v-img
-                :src="require('@/assets/img/logos/mg_white_logo.png')"
+                :src="logo_src"
                 height="120"
                 width="120"/>
           </div>
@@ -17,9 +17,11 @@
               Todos os direitos reservados.
               <p class="ma-0 pa-0">
                 <strong>CNPJ:</strong>
-                00.000.000/0000-00
+                {{ business_cnpj }}
               </p>
-              <strong>Grupo MG Ltda.</strong>
+              <strong>
+                {{ business_name }}
+              </strong>
             </div>
           </v-container>
         </div>
@@ -31,14 +33,14 @@
         <strong class="white--text align-center">SIGA-NOS</strong>
         <div class="d-flex flex-row text" style="height: 100%;">
           <v-row class="white--text pl-2 pr-sm-16 pt-6 mx-16 mx-sm-0">
-            <a class="mx-auto" onclick="document.location = 'https://facebook.com'">
-              <v-icon  class="mr-sm-4" large dark aria-hidden="false">mdi-facebook</v-icon>
-            </a>
-            <a class="mx-auto" onclick="document.location = ''">
+            <a class="mx-auto" onclick="document.location = instagram_link">
               <v-icon class="mr-sm-4" large dark aria-hidden="false">mdi-instagram</v-icon>
             </a>
-            <a class="mx-auto" onclick="document.location = ''">
+            <a class="mx-auto" onclick="document.location = email_link">
               <v-icon class="mr-sm-4" large dark aria-hidden="false">mdi-gmail</v-icon>
+            </a>
+            <a class="mx-auto" onclick="document.location = whatsapp_link">
+              <v-icon class="mr-sm-4" large dark aria-hidden="false">mdi-whatsapp</v-icon>
             </a>
           </v-row>
         </div>
@@ -55,6 +57,32 @@
 
 <script>
 export default {
-  name: "BusinessMobile"
+  name: "BusinessMobile",
+  props: {
+    logo_src: {
+      type: String,
+      required: true
+    },
+    business_name: {
+      type: String,
+      required: true
+    },
+    business_cnpj: {
+      type: String,
+      required: true
+    },
+    instagram_link: {
+      type: String,
+      required: true
+    },
+    email_link: {
+      type: String,
+      required: true
+    },
+    whatsapp_link: {
+      type: String,
+      required: true
+    }
+  }
 }
 </script>

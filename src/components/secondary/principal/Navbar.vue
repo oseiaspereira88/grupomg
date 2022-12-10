@@ -1,8 +1,43 @@
 <template>
   <div>
     <v-app-bar
+        v-if="!isMobile"
         style="z-index: 2; background: #EBEBEB; min-height: 0"
         hide-on-scroll
+        scroll-target="#scrolling-techniques-4"
+        absolute>
+
+      <div id="home">
+        <a onclick="window.location = '/'">
+          <v-img :src="nav_image_src"
+                 style="width: 120px;left: 0;"
+                 class="pa-0"
+                 contain/>
+        </a>
+      </div>
+
+      <v-row v-if="!isMobile" justify="center" no-gutters>
+        <div v-for="(item, i) in items" :key="i" :style="{fontSize: 10 + 'pt'}">
+          <v-btn @click="navigateTo(item.link)" v-if="item.link === '#home'" text class="mx-1 my-2 v-btn--active"
+                 color="#117263">
+            {{ item.title }}
+          </v-btn>
+          <v-btn @click="navigateTo(item.link)" v-else text class="mx-1 my-2" color="#117263">
+            {{ item.title }}
+          </v-btn>
+        </div>
+      </v-row>
+
+      <div v-else style="width: 100%;">
+        <v-app-bar-nav-icon @click="drawer = true" class="float-end mr-1"/>
+      </div>
+
+    </v-app-bar>
+
+    <v-app-bar
+        v-if="isMobile"
+        style="z-index: 2; background: #EBEBEB; min-height: 0"
+        inverted-scroll
         scroll-target="#scrolling-techniques-4"
         absolute>
 

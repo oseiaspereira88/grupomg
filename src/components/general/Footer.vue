@@ -4,16 +4,16 @@
       <v-col cols="8" class="text-center text--darken-1">
         <div class="d-flex flex-row" style="height: 100%;">
           <div class="ml-16 pl-12">
-            <v-img height="150" width="130" :src="require('@/assets/img/logos/mg_white_logo.png')"></v-img>
+            <v-img height="150" width="130" :src="logo_src"></v-img>
           </div>
           <v-container fill-height fluid style="width: 33vw">
             <div class="text-left white--text pt-4">
               <strong>Todos os direitos reservados.</strong>
               <p class="ma-0 pa-0">
                 <strong>CNPJ:</strong>
-                00.000.000/0000-00
+                {{ business_cnpj }}
               </p>
-              <p>Grupo MG Ltda.</p>
+              <p>{{ business_name }}</p>
             </div>
           </v-container>
         </div>
@@ -22,14 +22,14 @@
         <strong class="white--text">Siga-nos</strong>
         <div class="d-flex flex-row" style="height: 100%;">
           <v-row class="white--text pl-2 pr-16 pt-4">
-            <a onclick="document.location = 'https://facebook.com'">
-              <v-icon class="mr-4" large dark aria-hidden="false" >mdi-facebook</v-icon>
-            </a>
-            <a onclick="document.location = ''">
+            <a @click="openLink(instagram_link)">
               <v-icon class="mr-4" large dark aria-hidden="false" >mdi-instagram</v-icon>
             </a>
-            <a onclick="document.location = ''">
+            <a @click="openLink(email_link)">
               <v-icon class="mr-4" large dark aria-hidden="false" >mdi-gmail</v-icon>
+            </a>
+            <a @click="openLink(whatsapp_link)">
+              <v-icon class="mr-sm-4" large dark aria-hidden="false">mdi-whatsapp</v-icon>
             </a>
           </v-row>
         </div>
@@ -48,5 +48,36 @@
 
 export default {
   name: 'Footer',
+  props: {
+    logo_src: {
+      type: String,
+      required: true
+    },
+    business_name: {
+      type: String,
+      required: true
+    },
+    business_cnpj: {
+      type: String,
+      required: true
+    },
+    instagram_link: {
+      type: String,
+      required: true
+    },
+    email_link: {
+      type: String,
+      required: true
+    },
+    whatsapp_link: {
+      type: String,
+      required: true
+    }
+  },
+  methods: {
+    openLink(link) {
+      window.open(link, '_blank').focus()
+    }
+  }
 }
 </script>

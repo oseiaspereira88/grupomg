@@ -1,6 +1,5 @@
 <template>
-  <v-container id="cover-section" class="section">
-    <div id="home"></div>
+  <v-container id="cover-section" class="section" style="height: auto">
     <v-img id="img_cover" :src="image_src"></v-img>
   </v-container>
 </template>
