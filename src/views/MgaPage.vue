@@ -18,14 +18,13 @@
 
       <About
           text="Nossa empresa é especializada em soluções de tecnologia da informação,
-        com foco em desenvolvimento de sistemas web e mobile, consultoria e treinamentos.
-        Nossa equipe é formada por profissionais com mais de 10 anos de experiência em
-        desenvolvimento de software, com foco em soluções de alta performance e
-        escalabilidade. Nossa missão é entregar soluções de tecnologia da informação
-        que atendam as necessidades de nossos clientes, com foco em qualidade, agilidade
-        e custo-benefício."
+                com foco em desenvolvimento de sistemas web e mobile, consultoria e treinamentos.
+                Nossa missão é entregar soluções de tecnologia da informação que atendam as
+                necessidades de nossos clientes, com foco em qualidade, agilidade
+                e custo-benefício."
 
           :image_src="require('@/assets/img/mgp/mgp-2.png')"
+          :video_src="require('@/assets/video/mga-info-video.mp4')"
       />
 
       <Portfolio :works="works"/>

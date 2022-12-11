@@ -28,7 +28,13 @@
 
 
       <v-col cols="7" class="pt-6 mt-6 pr-16">
-        <video class="rounded-lg" style="box-shadow: #d5d5d5 0px 0px 2px 1px" width="100%" height="100%" controls>
+        <video
+            width="100%"
+            height="100%"
+            class="rounded-lg"
+            style="box-shadow: #d5d5d5 0px 0px 2px 1px"
+            controls
+        >
           <source :src="video_src" type="video/mp4">
           Your browser does not support HTML5 video.
         </video>

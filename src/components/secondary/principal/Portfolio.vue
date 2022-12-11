@@ -1,17 +1,14 @@
 <template>
-  <v-container class="section pt-12">
+  <v-container class="section pt-sm-12 pt-4">
     <v-row class="py-10" justify="center" align="center" no-gutters>
       <v-col cols="7" sm="5" md="3" class="text-center">
-        <h2 class="text-center">TRABALHOS</h2>
+        <h2 class="text-center">PORTIFÓLIOS</h2>
         <div class="pt-1 mx-16" style="background: #0a948f"></div>
       </v-col>
     </v-row>
     <div class="px-0">
       <v-slide-group
-          v-model="model"
           show-arrows
-          style="width: 920px;"
-          class="mx-auto"
       >
         <v-slide-item v-for="(work, i) in works" :key="i">
 
@@ -25,10 +22,8 @@
                 :src="work.src"
                 class="white--text align-end"
                 gradient="180deg, rgba(0,0,0,.1), rgba(0,0,0,.9)"
-                height="230"
+                height="240"
             >
-              <v-card-title>Piso vinílico</v-card-title>
-              <v-card-subtitle>49 opções disponíveis</v-card-subtitle>
             </v-img>
 
           </v-card>
