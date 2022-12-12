@@ -43,6 +43,7 @@
       />
 
       <ResponsiveFooter
+          :is_secondary_page="true"
           :logo_src="require('@/assets/img/logos/mga_logo.png')"
           business_name="MGA Ambientes Planejados"
           business_cnpj="00.000.000/0000-00"

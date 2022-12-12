@@ -36,13 +36,13 @@
           :video_src="require('@/assets/video/mga-info-video.mp4')"
       />
       <ResponsiveFooter
+          :is_secondary_page="true"
           :logo_src="require('@/assets/img/logos/mgs_logo.png')"
-          bussiness_name="MGS Segurança Eletrônica"
-          bussiness_cnpj="33.333.333/3333-33"
+          business_name="MGS Segurança Ltda."
+          business_cnpj="33.333.333/3333-33"
           email_link="mailto:mgs.oficial@gmail.com?subject=Contato%20de%20Cliente%20via%20Website"
           instagram_link="https://instagram.com/_u/mgs_seguranca/"
-          whatsapp_link="https://api.whatsapp.com/send?phone=84996212299"
-      />
+          whatsapp_link="https://api.whatsapp.com/send?phone=84996212299"/>
 
     </v-sheet>
   </div>

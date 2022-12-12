@@ -11,6 +11,7 @@
     />
     <FooterMobile
         v-if="isMobile"
+        :is_secondary_page="is_secondary_page"
         :logo_src="logo_src"
         :business_name="business_name"
         :business_cnpj="business_cnpj"
@@ -38,6 +39,10 @@ export default {
     };
   },
   props: {
+    is_secondary_page: {
+      type: Boolean,
+      default: false
+    },
     logo_src: {
       type: String,
       required: true

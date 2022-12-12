@@ -1,45 +1,50 @@
 <template>
   <v-footer class="pb-4" style="background: #0a948f">
     <v-row justify="center" no-gutters>
-      <v-col
-          cols="12" sm="8"
-          class="text-center text--darken-1"
-      >
-        <div class="d-flex flex-row" style="height: 100%;">
-          <div class="mx-6 ml-sm-12 pt-6">
-            <v-img
-                :src="logo_src"
-                height="120"
-                width="120"/>
-          </div>
-          <v-container fill-height fluid>
-            <div class="text-left white--text pt-6">
-              Todos os direitos reservados.
-              <p class="ma-0 pa-0">
-                <strong>CNPJ:</strong>
-                {{ business_cnpj }}
-              </p>
-              <strong>
-                {{ business_name }}
-              </strong>
-            </div>
-          </v-container>
+      <v-col cols="12">
+        <div class="pt-4">
+          <v-img
+              v-if="is_secondary_page"
+              :src="logo_src"
+              class="mx-auto"
+              height="90"
+              width="180"/>
+          <v-img
+              v-else
+              :src="logo_src"
+              class="mx-auto"
+              height="120"
+              width="120"/>
         </div>
+        <v-container>
+          <div class="text-center mx-auto white--text pt-0">
+            Todos os direitos reservados.
+            <p class="ma-0 pa-0">
+              <strong>CNPJ:</strong>
+              {{ business_cnpj }}
+            </p>
+            <strong>
+              {{ business_name }}
+            </strong>
+          </div>
+        </v-container>
       </v-col>
       <v-col
-          cols="12" sm="4"
-          class="px-sm-4 px-0 pt-4 pt-sm-14 text--darken-1 text-center text-sm-left"
+          cols="12" sm="6"
+          class="px-sm-4 px-0 pt-4 text--darken-1 text-center text-sm-left"
       >
-        <strong class="white--text align-center">SIGA-NOS</strong>
-        <div class="d-flex flex-row text" style="height: 100%;">
-          <v-row class="white--text pl-2 pr-sm-16 pt-6 mx-16 mx-sm-0">
-            <a class="mx-auto" onclick="document.location = instagram_link">
+        <h4 class="text-center">
+          <strong class="white--text" style="width: min-content;">SIGA-NOS</strong>
+        </h4>
+        <div class="text" style="height: 100%;">
+          <v-row class="white--text pt-6 mx-16 mx-sm-0">
+            <a class="mx-auto" @click="openLink(instagram_link)">
               <v-icon class="mr-sm-4" large dark aria-hidden="false">mdi-instagram</v-icon>
             </a>
-            <a class="mx-auto" onclick="document.location = email_link">
+            <a class="mx-auto" @click="openLink(email_link)">
               <v-icon class="mr-sm-4" large dark aria-hidden="false">mdi-gmail</v-icon>
             </a>
-            <a class="mx-auto" onclick="document.location = whatsapp_link">
+            <a class="mx-auto" @click="openLink(whatsapp_link)">
               <v-icon class="mr-sm-4" large dark aria-hidden="false">mdi-whatsapp</v-icon>
             </a>
           </v-row>
@@ -57,8 +62,12 @@
 
 <script>
 export default {
-  name: "BusinessMobile",
+  name: "FooterMobile",
   props: {
+    is_secondary_page: {
+      type: Boolean,
+      required: true
+    },
     logo_src: {
       type: String,
       required: true
@@ -82,6 +91,11 @@ export default {
     whatsapp_link: {
       type: String,
       required: true
+    }
+  },
+  methods: {
+    openLink(link) {
+      window.open(link, '_blank').focus()
     }
   }
 }

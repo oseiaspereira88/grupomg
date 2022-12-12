@@ -26,6 +26,7 @@
         e custo-benefício."
 
           :image_src="require('@/assets/img/mgp/mgp-2.png')"
+          :video_src="require('@/assets/video/mga-info-video.mp4')"
       />
 
       <Portfolio :works="works"/>
@@ -38,6 +39,7 @@
           :video_src="require('@/assets/video/mga-info-video.mp4')"
       />
       <ResponsiveFooter
+          :is_secondary_page="true"
           :logo_src="require('@/assets/img/logos/mgp_logo.png')"
           business_name="MGP Pré-moldados e construções"
           business_cnpj="22.222.222/2222-22"
