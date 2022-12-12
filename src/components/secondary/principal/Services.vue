@@ -63,14 +63,21 @@
                 elevation="2"
             >
               <v-img height="160" :src="service.src"></v-img>
-              <v-card-title>
+              <v-card-title style="cursor: pointer" @click="serviceToggle(service)">
                 <h4 class="mx-auto">{{ service.title }}</h4>
               </v-card-title>
-              <v-card-subtitle class="text-center pb-0">
-                {{ service.subtitle }}
+              <v-card-subtitle
+                  style="cursor: pointer"
+                  class="text-center pb-0 pt-0"
+                  @click="serviceToggle(service)"
+              >
+                ver mais
               </v-card-subtitle>
 
-              <v-card-actions class="pa-0 px-2">
+              <v-card-actions
+                  style="cursor: pointer"
+                  @click="serviceToggle(service)"
+                  class="pa-0 px-2">
                 <v-btn icon @click="serviceToggle(service)" class="mx-auto">
                   <v-icon>{{ service.show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
                 </v-btn>

@@ -23,6 +23,7 @@
                 class="white--text align-end"
                 gradient="180deg, rgba(0,0,0,.1), rgba(0,0,0,.9)"
                 height="240"
+                style="filter: brightness(1.8)"
             >
             </v-img>
 

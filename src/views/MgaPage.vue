@@ -31,12 +31,11 @@
 
       <Solicitation whatsapp_number="84994310065"/>
 
-      <Reliability/>
+      <Reliability v-if="!isMobile"/>
 
       <Clients :clients="clients"/>
 
       <Information
-          address="Rua João Pessoa, 1000, Centro, Mossoró/RN"
           email="contato_mga@gmail.com"
           phone="84 99943-1006"
           :video_src="require('@/assets/video/mga-info-video.mp4')"
@@ -163,13 +162,17 @@ export default {
         },
       ],
       works: [
-        {src: require('@/assets/img/cover.jpg'), id: 1},
-        {src: require('@/assets/img/cover.jpg'), id: 2},
-        {src: require('@/assets/img/cover.jpg'), id: 3},
-        {src: require('@/assets/img/cover.jpg'), id: 4},
-        {src: require('@/assets/img/cover.jpg'), id: 5},
-        {src: require('@/assets/img/cover.jpg'), id: 6},
-        {src: require('@/assets/img/cover.jpg'), id: 7},
+        {src: require('@/assets/img/portifolio/mga/portifolio-01.jpg'), id: 1},
+        {src: require('@/assets/img/portifolio/mga/portifolio-02.jpg'), id: 2},
+        {src: require('@/assets/img/portifolio/mga/portifolio-03.jpg'), id: 3},
+        {src: require('@/assets/img/portifolio/mga/portifolio-04.jpg'), id: 4},
+        {src: require('@/assets/img/portifolio/mga/portifolio-05.jpg'), id: 5},
+        {src: require('@/assets/img/portifolio/mga/portifolio-06.jpg'), id: 6},
+        {src: require('@/assets/img/portifolio/mga/portifolio-07.jpg'), id: 7},
+        {src: require('@/assets/img/portifolio/mga/portifolio-08.jpg'), id: 8},
+        {src: require('@/assets/img/portifolio/mga/portifolio-09.jpg'), id: 9},
+        {src: require('@/assets/img/portifolio/mga/portifolio-10.jpg'), id: 10},
+        {src: require('@/assets/img/portifolio/mga/portifolio-11.jpg'), id: 11},
       ],
       clients: [
         {srcImage: require('@/assets/img/logos/mg_logo.png')},
