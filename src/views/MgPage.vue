@@ -7,7 +7,7 @@
     <ResponsiveFooter
         business_name="Grupo MG Ltda."
         business_cnpj="00.000.000/0001-00"
-        :logo_src="require('@/assets/img/logos/mg_white_logo.png')"
+        :logo_src="require('@/assets/img/logos/mg_white_min_logo.png')"
         email_link="mailto:grupomg@gmail.com?subject=Contato%20de%20Cliente%20via%20Website"
         instagram_link="https://instagram.com/_u/grupomg/"
         whatsapp_link="https://api.whatsapp.com/send?phone=84996212299"
@@ -43,7 +43,7 @@ export default {
     return {
       showNav: false,
       clients: [
-        {image_src: require('@/assets/img/logos/mg_logo.png')},
+        {image_src: require('@/assets/img/logos/mg_min_logo.png')},
         {image_src: require('@/assets/img/cards/card_mga.png')},
         {image_src: require('@/assets/img/cards/card_mgp.png')},
         {image_src: require('@/assets/img/cards/card_mgs.png')},

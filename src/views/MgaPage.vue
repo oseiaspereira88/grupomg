@@ -175,7 +175,7 @@ export default {
         {src: require('@/assets/img/portifolio/mga/portifolio-11.jpg'), id: 11},
       ],
       clients: [
-        {srcImage: require('@/assets/img/logos/mg_logo.png')},
+        {srcImage: require('@/assets/img/logos/mg_min_logo.png')},
         {srcImage: require('@/assets/img/cards/card_mga.png')},
         {srcImage: require('@/assets/img/cards/card_mgp.png')},
         {srcImage: require('@/assets/img/cards/card_mgs.png')},

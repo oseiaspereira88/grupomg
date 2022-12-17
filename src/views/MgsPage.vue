@@ -115,7 +115,7 @@ export default {
         {src: require('@/assets/img/cover.jpg'), id: 7},
       ],
       clients: [
-        {srcImage: require('@/assets/img/logos/mg_logo.png')},
+        {srcImage: require('@/assets/img/logos/mg_min_logo.png')},
         {srcImage: require('@/assets/img/cards/card_mga.png')},
         {srcImage: require('@/assets/img/cards/card_mgp.png')},
         {srcImage: require('@/assets/img/cards/card_mgs.png')},
