@@ -23,16 +23,21 @@
             <v-card-title>
               {{ service.title }}
             </v-card-title>
-            <v-card-subtitle>
+            <v-card-subtitle class="py-0">
               {{ service.subtitle }}
             </v-card-subtitle>
 
-            <v-card-actions>
+            <v-card-actions class="pt-0">
               <v-btn disabled color="orange lighten-2" style="color: orange !important;" text>
                 Saiba mais
               </v-btn>
               <v-spacer></v-spacer>
-              <v-btn icon @click="serviceToggle(service)">
+              <v-btn
+                  icon
+                  @mouseenter="serviceMouseEnter(service)"
+                  @mouseleave="serviceMouseLeave(service)"
+                  @click="serviceToggle(service)"
+              >
                 <v-icon>{{ service.show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
               </v-btn>
             </v-card-actions>
@@ -78,7 +83,7 @@
                   style="cursor: pointer"
                   @click="serviceToggle(service)"
                   class="pa-0 px-2">
-                <v-btn icon @click="serviceToggle(service)" class="mx-auto">
+                <v-btn icon class="mx-auto">
                   <v-icon>{{ service.show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
                 </v-btn>
               </v-card-actions>
@@ -116,6 +121,14 @@ export default {
     }
   },
   methods: {
+    serviceMouseEnter(service) {
+      service.show = true
+    },
+
+    serviceMouseLeave(service) {
+      service.show = false
+    },
+
     serviceToggle(s) {
       if (s.show) {
         s.show = false

@@ -33,6 +33,8 @@
 
       <Reliability v-if="!isMobile"/>
 
+      <Reliability v-if="isMobile"/>
+
       <Clients :clients="clients"/>
 
       <Information
