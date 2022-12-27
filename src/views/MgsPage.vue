@@ -26,15 +26,20 @@
              :image_src="require('@/assets/img/mgp/mgp-2.png')"
       />
       <Portfolio :works="works"/>
+
       <Solicitation whatsapp_number="84994310065"/>
-      <Reliability/>
+
+      <ResponsiveReliability :pages="reliability_pages"/>
+
       <Clients :clients="clients"/>
+
       <Information
           address="Rua João Pessoa, 1000, Centro, Mossoró/RN"
           email="contato_mgs@gmail.com"
           phone="84 99943-1006"
           :video_src="require('@/assets/video/mga-info-video.mp4')"
       />
+      
       <ResponsiveFooter
           :is_secondary_page="true"
           :logo_src="require('@/assets/img/logos/mgs_logo.png')"
@@ -56,8 +61,8 @@ import Partners from "@/components/secondary/principal/Partners.vue";
 import About from "@/components/secondary/principal/About.vue";
 import Portfolio from "@/components/secondary/principal/Portfolio.vue";
 import Solicitation from "@/components/secondary/principal/Solicitation.vue";
-import Reliability from "@/components/secondary/principal/Reliability.vue";
 import Clients from "@/components/secondary/principal/Clients.vue";
+import ResponsiveReliability from "@/components/secondary/reponsive/ResponsiveReliability.vue";
 import Information from "@/components/secondary/principal/Information.vue";
 import ResponsiveFooter from "@/components/general/ResponsiveFooter.vue";
 import { VueBotUI } from 'vue-bot-ui'
@@ -65,16 +70,16 @@ import { VueBotUI } from 'vue-bot-ui'
 export default {
   name: 'MgsPage',
   components: {
-    ResponsiveFooter,
     Navbar,
     Cover,
     Partners,
     About,
     Portfolio,
     Solicitation,
-    Reliability,
     Clients,
+    ResponsiveReliability,
     Information,
+    ResponsiveFooter,
     VueBotUI,
   },
   data: () => {
@@ -119,6 +124,46 @@ export default {
         {srcImage: require('@/assets/img/cards/card_mga.png')},
         {srcImage: require('@/assets/img/cards/card_mgp.png')},
         {srcImage: require('@/assets/img/cards/card_mgs.png')},
+      ],
+      reliability_pages: [
+        {
+          id: 0,
+          title: "Nosso compromisso",
+          srcImage: require('@/assets/img/portifolio/mga/portifolio-07.jpg'),
+          text: "Nos comprometemos a entregar o melhor serviço para nossos clientes, com a melhor qualidade e preço do mercado."
+        },
+        {
+          id: 1,
+          title: "Nossa missão",
+          srcImage: require('@/assets/img/portifolio/mga/portifolio-08.jpg'),
+          text:
+              "Nossa missão é oferecer soluções de " +
+              "tecnologia da informação que atendam às " +
+              "necessidades de nossos clientes, " +
+              "com qualidade, agilidade e segurança, " +
+              "alcançando a satisfação de nossos clientes " +
+              "e colaboradores."
+        },
+        {
+          id: 2,
+          title: "Nossa visão",
+          srcImage: require('@/assets/img/portifolio/mga/portifolio-09.jpg'),
+          text:
+              "Ser uma empresa de tecnologia da informação " +
+              "referência no mercado, reconhecida pela " +
+              "qualidade de seus serviços, pela " +
+              "satisfação de seus clientes e pela " +
+              "qualidade de vida de seus colaboradores."
+        },
+        {
+          id: 3,
+          title: "Nossos valores",
+          srcImage: require('@/assets/img/portifolio/mga/portifolio-10.jpg'),
+          text:
+              "Ética, Comprometimento, Qualidade, " +
+              "Inovação, Agilidade, Transparência, " +
+              "Responsabilidade Social e Sustentabilidade."
+        }
       ],
       isMobile: true,
       showNav: false,

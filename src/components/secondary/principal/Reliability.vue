@@ -12,8 +12,9 @@
     </v-row>
     <br>
     <v-card
-        class="mx-auto mt-6 mb-6 py-6 blue-grey"
+        class="mx-auto mt-6 mb-6 py-6"
         style="width: 60%; height: 380px"
+        color="#0a948f"
         elevation="0"
     >
       <div
@@ -21,20 +22,21 @@
           class="py-6"
       >
         <div style="height: 100%;">
-          <div class="pt-12" style="height: 85%;">
-            <h2 style="color: #ffffff">Nossos clientes</h2>
-            <p>
-            <span style="color: #ffffff">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Sed euismod, nunc sit amet aliquam tincidunt, nunc nisl aliquam purus,
-              sit amet aliquam nisl nunc sit amet elit. Sed euismod, nunc sit amet
-              aliquam tincidunt, nunc nisl aliquam purus, sit amet aliquam nisl nunc
-              sit amet elit.
-            </span>
+          <div class="pt-8" style="height: 85%;">
+            <h2 style="color: #ffffff">
+              {{ pages[currentPageId].title }}
+            </h2>
+            <p class="text-justify pr-6" style="color: #ffffff">
+              {{ pages[currentPageId].text }}
             </p>
           </div>
           <div class="py-4" style="height: 15%;">
-            <v-pagination :length="3" circle></v-pagination>
+            <v-pagination
+                :length="3"
+                @input="onPageChange"
+                :value="currentPageId"
+                circle
+            />
           </div>
         </div>
       </div>
@@ -44,7 +46,7 @@
           elevation="0"
       >
         <img
-            :src="require('@/assets/img/portifolio/mga/portifolio-07.jpg')"
+            :src="pages[currentPageId].srcImage"
             style="object-fit: cover;"
             height="100%"
             width="100%"
@@ -58,6 +60,27 @@
 
 <script>
 export default {
-  name: "Reliability"
+  name: "Reliability",
+  props: {
+    pages: {
+      type: Array,
+      required: true
+    }
+  },
+  data() {
+    return {
+      currentPageId: 1,
+    };
+  },
+  methods: {
+    onPageChange(newPage) {
+      this.currentPageId = newPage;
+    },
+  },
+  watch: {
+    "pagination.page": (newPage) => {
+      this.onPageChange(newPage);
+    },
+  },
 }
 </script>
